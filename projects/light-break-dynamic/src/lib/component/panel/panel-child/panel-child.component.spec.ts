@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PanelChildComponent } from './panel-child.component';
 
@@ -6,7 +6,7 @@ describe('PanelChildComponent', () => {
   let component: PanelChildComponent;
   let fixture: ComponentFixture<PanelChildComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PanelChildComponent ]
     })

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SwappingBoxComponent } from './swapping-box.component';
 
@@ -6,7 +6,7 @@ describe('SwappingBoxComponent', () => {
   let component: SwappingBoxComponent;
   let fixture: ComponentFixture<SwappingBoxComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SwappingBoxComponent ]
     })

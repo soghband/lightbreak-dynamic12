@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DynamicInputComponent } from './dynamic-input.component';
 
@@ -6,7 +6,7 @@ describe('DynamicInputComponent', () => {
   let component: DynamicInputComponent;
   let fixture: ComponentFixture<DynamicInputComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DynamicInputComponent ]
     })

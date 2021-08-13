@@ -1,4 +1,4 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import {ErrorMsgBubbleComponent} from './error-msg-bubble.component';
 
@@ -6,7 +6,7 @@ describe('ErrorMsgBubbleComponent', () => {
 	let component: ErrorMsgBubbleComponent;
 	let fixture: ComponentFixture<ErrorMsgBubbleComponent>;
 
-	beforeEach(async(() => {
+	beforeEach(waitForAsync(() => {
 		TestBed.configureTestingModule({
 			declarations: [ErrorMsgBubbleComponent]
 		})

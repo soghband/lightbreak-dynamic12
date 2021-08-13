@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TestAutoFormComponent } from './test-auto-form.component';
 
@@ -6,7 +6,7 @@ describe('TestAutoFormComponent', () => {
   let component: TestAutoFormComponent;
   let fixture: ComponentFixture<TestAutoFormComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ TestAutoFormComponent ]
     })

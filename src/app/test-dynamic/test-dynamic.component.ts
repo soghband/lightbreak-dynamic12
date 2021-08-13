@@ -13,7 +13,7 @@ import {OnInit, ViewChild, Component} from '@angular/core';
 @Component({
 	selector: 'app-test-dynamic',
 	templateUrl: `./test-dynamic.component.html`,
-	// styleUrls: ['./test-dynamic.component.css'],
+	styleUrls: ['./test-dynamic.component.scss'],
 })
 export class TestDynamicComponent implements OnInit {
 	@ViewChild('errorBubble', {static: true}) errorComp: ErrorMsgBubbleComponent;

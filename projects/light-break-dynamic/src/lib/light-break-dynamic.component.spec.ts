@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { LightBreakDynamicComponent } from './light-break-dynamic.component';
 
@@ -6,7 +6,7 @@ describe('LightBreakDynamicComponent', () => {
   let component: LightBreakDynamicComponent;
   let fixture: ComponentFixture<LightBreakDynamicComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ LightBreakDynamicComponent ]
     })

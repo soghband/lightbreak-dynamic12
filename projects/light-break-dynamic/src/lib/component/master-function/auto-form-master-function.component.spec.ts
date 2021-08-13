@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AutoFormMasterFunctionComponent } from './auto-form-master-function.component';
 
@@ -6,7 +6,7 @@ describe('AutoFormMasterFunctionComponent', () => {
   let component: AutoFormMasterFunctionComponent;
   let fixture: ComponentFixture<AutoFormMasterFunctionComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ AutoFormMasterFunctionComponent ]
     })

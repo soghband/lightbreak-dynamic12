@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FunctionMaualComponent } from './function-maual.component';
 
@@ -6,7 +6,7 @@ describe('FunctionMaualComponent', () => {
   let component: FunctionMaualComponent;
   let fixture: ComponentFixture<FunctionMaualComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ FunctionMaualComponent ]
     })

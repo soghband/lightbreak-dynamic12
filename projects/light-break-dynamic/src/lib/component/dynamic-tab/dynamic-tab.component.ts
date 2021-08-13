@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {isString} from 'util';
+import {isString} from '@angular-package/type';
 
 @Component({
 	selector: 'lb9-dynamic-tab',

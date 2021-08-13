@@ -9,7 +9,7 @@ import {FileUploadComponent} from '../dynamic-input/file-upload/file-upload.comp
 import {ImageComponent} from '../dynamic-input/image/image.component';
 import {AutoCompleteComponent} from '../dynamic-input/auto-complete/auto-complete.component';
 import {ButtonComponent} from '../dynamic-input/button/button.component';
-import {isArray, isNumber, isObject, isString} from 'util';
+import {isArray, isNumber, isObject, isString} from '@angular-package/type';
 import {SwappingBoxComponent} from '../dynamic-input/swapping-box/swapping-box.component';
 import {MapValueComponent} from '../dynamic-input/map-value/map-value.component';
 import {RadioComponent} from '../dynamic-input/radio/radio.component';

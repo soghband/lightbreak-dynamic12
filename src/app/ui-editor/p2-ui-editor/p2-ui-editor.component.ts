@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {isArray, isNumber} from 'util';
+import {isArray, isNumber} from '@angular-package/type';
 import {observable, Observable} from 'rxjs';
 import {DynamicTabComponent} from '../../../../projects/light-break-dynamic/src/lib/component/dynamic-tab/dynamic-tab.component';
 import {DynamicFormComponent} from '../../../../projects/light-break-dynamic/src/lib/component/dynamic-form/dynamic-form.component';

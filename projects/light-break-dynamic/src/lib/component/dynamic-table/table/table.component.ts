@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
-import {isBoolean} from 'util';
+import {isBoolean} from '@angular-package/type';
 
 @Component({
 	selector: 'lb9-table',

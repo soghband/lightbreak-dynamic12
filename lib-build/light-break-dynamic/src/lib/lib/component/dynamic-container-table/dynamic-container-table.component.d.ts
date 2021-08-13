@@ -23,3 +23,4 @@ export declare class DynamicContainerTableComponent implements OnInit {
     checkReRender(fieldName: any): boolean;
     deleteRow(actionDataIndex: any): void;
 }
+//# sourceMappingURL=dynamic-container-table.component.d.ts.map

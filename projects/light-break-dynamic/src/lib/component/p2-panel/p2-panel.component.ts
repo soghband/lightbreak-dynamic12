@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'lb9-p2-panel',
+  selector: 'lb12-p2-panel',
   templateUrl: './p2-panel.component.html',
   styleUrls: ['./p2-panel.component.css']
 })

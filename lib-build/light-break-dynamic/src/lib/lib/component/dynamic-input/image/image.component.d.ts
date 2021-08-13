@@ -20,10 +20,10 @@ export declare class ImageComponent extends DynamicBehaviorComponent implements 
     errorMsg: string;
     acceptExt: string;
     fileTypeList: {
-        "jpeg": string;
-        "jpg": string;
-        "png": string;
-        "svg": string;
+        jpeg: string;
+        jpg: string;
+        png: string;
+        svg: string;
     };
     constructor(animationService: AnimationService);
     ngOnInit(): void;
@@ -39,3 +39,4 @@ export declare class ImageComponent extends DynamicBehaviorComponent implements 
     deleteCurrentImage(index: any): void;
     deleteImage(index: any): void;
 }
+//# sourceMappingURL=image.component.d.ts.map

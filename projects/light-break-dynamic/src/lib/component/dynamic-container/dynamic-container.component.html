@@ -2,14 +2,14 @@
     <ng-container *ngIf="containerCreation.fieldList">
         <ng-container *ngFor="let inputData of objKey(containerCreation.fieldList)">
             <ng-container *ngIf="checkReRender(containerCreation.fieldList[inputData].fieldName)">
-                <lb9-dynamic-input [type]="containerCreation.fieldList[inputData].type"
+                <lb12-dynamic-input [type]="containerCreation.fieldList[inputData].type"
                                    [data]="data[actionDataIndex]"
                                    [rowIndex]="actionDataIndex"
                                    [inputIndex]="inputData"
                                    [option]="option"
                                    [fieldCreation]="containerCreation.fieldList[inputData]"
                                    (callBack)="processCallBack($event)"
-                                   (panelCallBack)="processPanelCallBack($event)"></lb9-dynamic-input>
+                                   (panelCallBack)="processPanelCallBack($event)"></lb12-dynamic-input>
             </ng-container>
         </ng-container>
     </ng-container>

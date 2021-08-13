@@ -10,3 +10,4 @@ export declare class CollapseComponent implements OnInit {
     ngOnInit(): void;
     toggleShowDiv(): void;
 }
+//# sourceMappingURL=collapse.component.d.ts.map

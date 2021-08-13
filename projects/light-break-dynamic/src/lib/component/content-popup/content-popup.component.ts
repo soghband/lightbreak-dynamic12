@@ -4,7 +4,7 @@ import { timer } from 'rxjs';
 
 
 @Component({
-  selector: 'lb9-content-popup',
+  selector: 'lb12-content-popup',
   templateUrl: './content-popup.component.html',
   styleUrls: ['./content-popup.component.scss'],
   animations: [FadeInOutAnimation]

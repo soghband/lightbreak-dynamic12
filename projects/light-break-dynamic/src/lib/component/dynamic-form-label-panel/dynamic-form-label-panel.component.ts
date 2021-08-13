@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
-    selector: 'lb9-dynamic-form-label-panel',
+    selector: 'lb12-dynamic-form-label-panel',
     templateUrl: './dynamic-form-label-panel.component.html'
 })
 export class DynamicFormLabelPanelComponent implements OnInit {

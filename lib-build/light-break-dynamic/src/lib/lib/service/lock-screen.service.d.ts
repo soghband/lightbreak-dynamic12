@@ -9,3 +9,4 @@ export declare class LockScreenService {
     lockScreen(timeout?: number): void;
     unLockScreen(): void;
 }
+//# sourceMappingURL=lock-screen.service.d.ts.map

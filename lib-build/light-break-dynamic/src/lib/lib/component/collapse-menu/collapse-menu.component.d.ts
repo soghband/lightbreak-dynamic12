@@ -24,3 +24,4 @@ export declare class CollapseMenuComponent implements OnInit {
     checkRole(index: any): boolean;
     checkChildRole(child: any): boolean;
 }
+//# sourceMappingURL=collapse-menu.component.d.ts.map

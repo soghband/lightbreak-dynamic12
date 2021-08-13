@@ -19,3 +19,4 @@ export declare class DynamicTableComponent implements OnInit {
     getCheckedList(): any[];
     clearCheckedList(): void;
 }
+//# sourceMappingURL=dynamic-table.component.d.ts.map

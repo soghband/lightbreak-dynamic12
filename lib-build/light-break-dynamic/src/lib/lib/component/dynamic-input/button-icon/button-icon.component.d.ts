@@ -18,3 +18,4 @@ export declare class ButtonIconComponent extends DynamicBehaviorComponent implem
     ngOnInit(): void;
     processClick(event: any, action: any, dataIndex: any, valueList: any): void;
 }
+//# sourceMappingURL=button-icon.component.d.ts.map

@@ -21,3 +21,4 @@ export declare class RadioComponent extends DynamicBehaviorComponent implements 
     processCall(data: any): void;
     processChange($event: any, s: any, valueList: any): void;
 }
+//# sourceMappingURL=radio.component.d.ts.map

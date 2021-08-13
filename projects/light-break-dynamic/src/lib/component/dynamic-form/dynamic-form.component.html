@@ -3,11 +3,11 @@
         <ng-container *ngIf="!formCreation.form.option.displayMode || formCreation.form.option.displayMode != 'table'">
             <ng-container *ngFor="let rowIndex of objKey(formCreation.data)">
                 <ng-container *ngIf="formCreation.form.option.frame == true">
-                    <lb9-dynamic-form-frame [header]="frameHeader"
+                    <lb12-dynamic-form-frame [header]="frameHeader"
                                             [rowIndex]="rowIndex"
                                             [showDeleteRow]="formCreation.form.option.deleteRow"
                                             (callback)="callBackFrame($event)">
-                        <lb9-dynamic-form-row [_reRenderFieldList]="_reRenderFieldList"
+                        <lb12-dynamic-form-row [_reRenderFieldList]="_reRenderFieldList"
                                               [containerList]="formCreation.form.containerList"
                                               [option]="formCreation.form.option"
                                               [data]="formCreation.data"
@@ -15,19 +15,19 @@
                                               (callBack)="processCallBack($event)"
                                               (panelCallBack)="processPanelCallBack($event)">
 
-                        </lb9-dynamic-form-row>
+                        </lb12-dynamic-form-row>
 
-                    </lb9-dynamic-form-frame>
+                    </lb12-dynamic-form-frame>
                 </ng-container>
                 <ng-container *ngIf="formCreation.form.option.frame == false || !formCreation.form.option.frame">
-                    <lb9-dynamic-form-row [_reRenderFieldList]="_reRenderFieldList"
+                    <lb12-dynamic-form-row [_reRenderFieldList]="_reRenderFieldList"
                                           [containerList]="formCreation.form.containerList"
                                           [option]="formCreation.form.option"
                                           [data]="formCreation.data"
                                           [rowIndex]="rowIndex"
                                           (callBack)="processCallBack($event)"
                                           (panelCallBack)="processPanelCallBack($event)">
-                    </lb9-dynamic-form-row>
+                    </lb12-dynamic-form-row>
                 </ng-container>
             </ng-container>
         </ng-container>
@@ -46,7 +46,7 @@
                         <ng-container *ngFor="let rowIndex of objKey(formCreation.data)">
                             <ng-container *ngIf="formCreation.form.containerList">
                                 <ng-container *ngFor="let containerIndex of objKey(refinedContainerTableMode)">
-                                    <tr lb9-dynamic-container-table
+                                    <tr lb12-dynamic-container-table
                                         [containerCreation]="refinedContainerTableMode[containerIndex]"
                                         [data]="formCreation.data"
                                         [actionDataIndex]="rowIndex"

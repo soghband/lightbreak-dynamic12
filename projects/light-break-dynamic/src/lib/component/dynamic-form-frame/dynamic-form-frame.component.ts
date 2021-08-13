@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
-    selector: 'lb9-dynamic-form-frame',
+    selector: 'lb12-dynamic-form-frame',
     templateUrl: './dynamic-form-frame.component.html'
 })
 export class DynamicFormFrameComponent implements OnInit {

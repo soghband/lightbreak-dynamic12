@@ -16,3 +16,4 @@ export declare class DynamicPopupComponent implements OnInit {
     confirm(): void;
     close(): void;
 }
+//# sourceMappingURL=dynamic-popup.component.d.ts.map

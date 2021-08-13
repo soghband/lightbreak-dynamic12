@@ -18,3 +18,4 @@ export declare class SideBarComponent implements OnInit {
     toggleSideBar(): void;
     reProcessScrollBar(): void;
 }
+//# sourceMappingURL=side-bar.component.d.ts.map

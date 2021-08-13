@@ -7,3 +7,4 @@ export declare class AutoFormComponent extends AutoFormMasterFunctionComponent i
     private lockScr;
     constructor(http: FormHttpRequestService, lockScr: LockScreenService);
 }
+//# sourceMappingURL=auto-form.component.d.ts.map

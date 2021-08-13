@@ -19,3 +19,4 @@ export declare class DynamicTabComponent implements OnInit {
     getCssStatus(tabNumber: any): "p2DShowTab" | "p2DHideTab";
     gotoTab(tabIndex: any): void;
 }
+//# sourceMappingURL=dynamic-tab.component.d.ts.map

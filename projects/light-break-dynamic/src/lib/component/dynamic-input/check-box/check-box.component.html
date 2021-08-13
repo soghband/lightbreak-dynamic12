@@ -1,8 +1,8 @@
 <div class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}" [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
-    <lb9-dynamic-form-label-panel
+    <lb12-dynamic-form-label-panel
             [fieldCreation]="fieldCreation"
             [option]="option"
-            [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+            [width]="getLabelWidth()"></lb12-dynamic-form-label-panel>
     <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
         <div class="posRelative">
             <div *ngIf="option.displayMode == 'table'" class="checkBoxTableDisplay">

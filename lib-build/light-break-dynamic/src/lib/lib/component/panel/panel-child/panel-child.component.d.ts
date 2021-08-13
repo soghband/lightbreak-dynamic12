@@ -7,3 +7,4 @@ export declare class PanelChildComponent implements OnInit {
     constructor();
     ngOnInit(): void;
 }
+//# sourceMappingURL=panel-child.component.d.ts.map

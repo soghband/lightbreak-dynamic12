@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 @Component({
-	selector: 'lb9-paging',
+	selector: 'lb12-paging',
 	templateUrl: './paging.component.html'
 })
 export class PagingComponent implements OnInit {

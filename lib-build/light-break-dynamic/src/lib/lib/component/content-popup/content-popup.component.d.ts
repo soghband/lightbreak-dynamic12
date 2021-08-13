@@ -20,3 +20,4 @@ export declare class ContentPopupComponent implements OnInit {
     lockContent(): void;
     callbackProcess(action: any): void;
 }
+//# sourceMappingURL=content-popup.component.d.ts.map

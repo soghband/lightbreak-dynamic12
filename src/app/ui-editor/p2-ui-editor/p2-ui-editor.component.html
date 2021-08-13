@@ -1,4 +1,4 @@
-<lb9-panel-main [header]="'User Interface Editor'" [margin]="true">
+<lb12-panel-main [header]="'User Interface Editor'" [margin]="true">
     <div class="uiEditPanel">
         <div class="uiEditRow">
             <!--<div class="uiEditControlPanel uiCell componentControl">-->
@@ -33,24 +33,24 @@
             <!--</app-panel-child>-->
             <!--</div>-->
             <div class="uiCell">
-                <lb9-panel-child [header]="'Example Form'">
+                <lb12-panel-child [header]="'Example Form'">
                     <div class="contentPanel contentPanelGray">
-                        <lb9-dynamic-form #exampleRef [formCreation]="formCreation"
-                                          (panelCallBack)="processPanelCallBack($event)"></lb9-dynamic-form>
+                        <lb12-dynamic-form #exampleRef [formCreation]="formCreation"
+                                          (panelCallBack)="processPanelCallBack($event)"></lb12-dynamic-form>
                     </div>
-                </lb9-panel-child>
+                </lb12-panel-child>
             </div>
             <div class="uiPropertiesPanel uiCell propertiesControl">
-                <lb9-panel-child [header]="'Properties'">
+                <lb12-panel-child [header]="'Properties'">
                     <div class="contentPanel contentPanelGray p2DynamicTabPanel" id="propertiesControl">
-                        <lb9-dynamic-tab #tabRef [tabCreation]="propertiesTab"
-                                         (callBack)="precessTabCallBack($event)"></lb9-dynamic-tab>
+                        <lb12-dynamic-tab #tabRef [tabCreation]="propertiesTab"
+                                         (callBack)="precessTabCallBack($event)"></lb12-dynamic-tab>
                         <div class="tabContentPanel {{tabRef.getCssStatus(2)}}">
                             <div class="fixMaxHeight">
                                 <ng-scrollbar class="fixMaxHeight">
                                     <div class="fix-ng-scrollbar">
-                                        <lb9-dynamic-form #formEditRef
-                                                          [formCreation]="formPropertiesForm"></lb9-dynamic-form>
+                                        <lb12-dynamic-form #formEditRef
+                                                          [formCreation]="formPropertiesForm"></lb12-dynamic-form>
                                     </div>
                                 </ng-scrollbar>
                             </div>
@@ -59,8 +59,8 @@
                             </div>
                         </div>
                         <div class="tabContentPanel {{tabRef.getCssStatus(1)}}">
-                            <lb9-dynamic-form #containerEditRef
-                                              [formCreation]="containerPropertiesForm"></lb9-dynamic-form>
+                            <lb12-dynamic-form #containerEditRef
+                                              [formCreation]="containerPropertiesForm"></lb12-dynamic-form>
                             <div class="btnPanel">
                                 <div class="btn-style-dynamic btn-small" (click)="processSetContainer()">Set</div>
                             </div>
@@ -68,8 +68,8 @@
                         <div class="tabContentPanel {{tabRef.getCssStatus(0)}}">
                             <ng-scrollbar class="fixMaxHeight">
                                 <div class="fix-ng-scrollbar">
-                                    <lb9-dynamic-form #componentEditRef
-                                                      [formCreation]="componentPropertiesForm"></lb9-dynamic-form>
+                                    <lb12-dynamic-form #componentEditRef
+                                                      [formCreation]="componentPropertiesForm"></lb12-dynamic-form>
                                 </div>
                             </ng-scrollbar>
                             <div class="btnPanel">
@@ -79,7 +79,7 @@
                         <div class="tabContentPanel {{tabRef.getCssStatus(3)}}">
                             <div class="fixMaxHeight">
                                 <ng-scrollbar>
-                                    <lb9-dynamic-form #manageRef [formCreation]="manageForm"></lb9-dynamic-form>
+                                    <lb12-dynamic-form #manageRef [formCreation]="manageForm"></lb12-dynamic-form>
                                 </ng-scrollbar>
                             </div>
                             <div class="btnPanel">
@@ -92,7 +92,7 @@
                             </div>
                         </div>
                     </div>
-                </lb9-panel-child>
+                </lb12-panel-child>
             </div>
         </div>
     </div>
@@ -100,7 +100,7 @@
         <div class="importExportPanel">
             <div class="alignTop">
                 <div class="importExportCell">
-                    <lb9-panel-child [header]="'Generate From Data'">
+                    <lb12-panel-child [header]="'Generate From Data'">
                         <div class="contentPanel">
                             <div class="importTextArea">
                                 <json-editor [options]="editorOptions" [data]="importData.data" (change)="getJsonEditData($event)"></json-editor>
@@ -108,10 +108,10 @@
                             <div class="btn-style-dynamic" id="generate" (click)="processGenerate()">Generate Import
                             </div>
                         </div>
-                    </lb9-panel-child>
+                    </lb12-panel-child>
                 </div>
                 <div class="importExportCell">
-                    <lb9-panel-child [header]="'Export JSON'">
+                    <lb12-panel-child [header]="'Export JSON'">
                         <div class="contentPanel">
                             <div class="importTextArea">
                                 <textarea class="exportTextArea" [(ngModel)]="exportData.data">
@@ -120,9 +120,9 @@
                             </div>
                             <div class="btn-style-dynamic" (click)="processExport()">Export</div>
                         </div>
-                    </lb9-panel-child>
+                    </lb12-panel-child>
                 </div>
             </div>
         </div>
     </div>
-</lb9-panel-main>
+</lb12-panel-main>

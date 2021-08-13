@@ -1,6 +1,6 @@
 <ng-container *ngIf="containerList">
   <ng-container *ngFor="let containerIndex of objKey(containerList)">
-    <lb9-dynamic-container
+    <lb12-dynamic-container
             [containerCreation]="containerList[containerIndex]"
             [data]="data"
             [actionDataIndex]="rowIndex"
@@ -10,6 +10,6 @@
             (callBack)="processCallBack($event)"
             (panelCallBack)="processPanelCallBack($event)">
 
-    </lb9-dynamic-container>
+    </lb12-dynamic-container>
   </ng-container>
 </ng-container>

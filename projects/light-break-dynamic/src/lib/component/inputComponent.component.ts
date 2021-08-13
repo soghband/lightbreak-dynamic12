@@ -2,7 +2,7 @@ import {Component, Input, Output, ViewContainerRef, EventEmitter} from '@angular
 import {AnimationService} from '../service/animation.service';
 
 @Component({
-	selector: 'lb9-input',
+	selector: 'lb12-input',
 	template: ''
 })
 export class InputComponent {

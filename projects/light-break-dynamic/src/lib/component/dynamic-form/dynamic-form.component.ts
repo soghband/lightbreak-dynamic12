@@ -23,7 +23,7 @@ import {takeWhile} from 'rxjs/operators';
 import {ColorSelectComponent} from '../dynamic-input/color-select/color-select.component';
 
 @Component({
-    selector: 'lb9-dynamic-form',
+    selector: 'lb12-dynamic-form',
     templateUrl: './dynamic-form.component.html',
     entryComponents: [
         LabelComponent,

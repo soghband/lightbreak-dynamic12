@@ -3,7 +3,7 @@ import {DynamicBehaviorComponent} from '../../dynamic-behavior/dynamic-behavior.
 import {AnimationService} from '../../../service/animation.service';
 
 @Component({
-  selector: 'lb9-color-select',
+  selector: 'lb12-color-select',
   templateUrl: './color-select.component.html'
 })
 export class ColorSelectComponent extends DynamicBehaviorComponent implements OnInit {

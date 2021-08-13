@@ -6,3 +6,4 @@ export declare class P2PanelComponent implements OnInit {
     constructor();
     ngOnInit(): void;
 }
+//# sourceMappingURL=p2-panel.component.d.ts.map

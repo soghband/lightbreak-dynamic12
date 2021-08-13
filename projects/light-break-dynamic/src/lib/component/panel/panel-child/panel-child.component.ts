@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'lb9-panel-child',
+  selector: 'lb12-panel-child',
   templateUrl: './panel-child.component.html',
   styleUrls: ['./panel-child.component.scss']
 })

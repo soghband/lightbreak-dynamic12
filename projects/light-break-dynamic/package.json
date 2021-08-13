@@ -1,13 +1,14 @@
 {
-  "name": "@godigit/light-break-dynamic",
-  "version": "0.1.39",
+  "name": "@lightbreak/ng-form",
+  "version": "1.0.0-beta2",
   "peerDependencies": {
-    "@angular/common": "^9.0.2",
-    "@angular/core": "^9.0.2"
+    "@angular/common": "~12.2.1",
+    "@angular/core": "~12.2.1"
   },
   "dependencies": {
-    "@angular/cdk": "~9.0.1",
-    "ngx-scrollbar": "^7.2.0",
+    "@angular-package/type": "^4.2.0",
+    "@angular/cdk": "^9.0.1",
+    "ngx-scrollbar": "~7.2.0",
     "rxjs-compat": "^6.4.0",
     "tslib": "^2.0.0"
   }

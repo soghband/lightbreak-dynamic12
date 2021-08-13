@@ -5,7 +5,7 @@ import { takeWhile } from 'rxjs/operators';
 declare let $;
 
 @Component({
-    selector: 'lb9-dynamic-popup',
+    selector: 'lb12-dynamic-popup',
     templateUrl: './dynamic-popup.component.html'
 })
 export class DynamicPopupComponent implements OnInit {

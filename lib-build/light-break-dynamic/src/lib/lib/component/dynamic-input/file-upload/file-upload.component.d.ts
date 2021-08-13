@@ -16,3 +16,4 @@ export declare class FileUploadComponent extends DynamicBehaviorComponent implem
     handleFileSelect(evt: any): void;
     processCall(data: any): void;
 }
+//# sourceMappingURL=file-upload.component.d.ts.map

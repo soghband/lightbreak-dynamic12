@@ -20,3 +20,4 @@ export declare class ColorSelectComponent extends DynamicBehaviorComponent imple
     addMultiVal(): void;
     deleteMultiVal(dataIndex: any): void;
 }
+//# sourceMappingURL=color-select.component.d.ts.map

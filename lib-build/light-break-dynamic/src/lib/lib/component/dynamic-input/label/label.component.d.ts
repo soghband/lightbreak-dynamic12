@@ -20,3 +20,4 @@ export declare class LabelComponent extends DynamicBehaviorComponent implements 
     processCall(data: any): void;
     processPanelCallBack(event: any): void;
 }
+//# sourceMappingURL=label.component.d.ts.map

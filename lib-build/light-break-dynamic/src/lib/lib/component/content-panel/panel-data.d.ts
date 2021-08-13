@@ -3,3 +3,4 @@ export interface PanelData {
     html: string;
     css: string;
 }
+//# sourceMappingURL=panel-data.d.ts.map

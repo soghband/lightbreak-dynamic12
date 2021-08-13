@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, Output, OnInit} from '@angular/core';
 import {FadeInOutAnimation} from '../../../content-popup/animetion';
 
 @Component({
-	selector: 'lb9-date-picker',
+	selector: 'lb12-date-picker',
 	templateUrl: './date-picker.component.html',
 	animations: [FadeInOutAnimation]
 })

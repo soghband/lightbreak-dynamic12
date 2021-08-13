@@ -71,3 +71,4 @@ export declare class AutoFormMasterFunctionComponent implements OnInit, OnDestro
     check(): void;
     ngOnDestroy(): void;
 }
+//# sourceMappingURL=auto-form-master-function.component.d.ts.map

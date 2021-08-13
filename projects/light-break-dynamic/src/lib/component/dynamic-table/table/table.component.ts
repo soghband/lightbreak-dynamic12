@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges
 import {isBoolean} from '@angular-package/type';
 
 @Component({
-	selector: 'lb9-table',
+	selector: 'lb12-table',
 	templateUrl: './table.component.html'
 })
 export class TableComponent implements OnInit, OnChanges  {

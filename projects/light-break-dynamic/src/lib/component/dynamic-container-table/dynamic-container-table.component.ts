@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output, QueryList, ViewChildren}
 import {DynamicInputComponent} from '../dynamic-input/dynamic-input.component';
 
 @Component({
-  selector: '[lb9-dynamic-container-table]',
+  selector: '[lb12-dynamic-container-table]',
   templateUrl: './dynamic-container-table.component.html',
 })
 export class DynamicContainerTableComponent implements OnInit {

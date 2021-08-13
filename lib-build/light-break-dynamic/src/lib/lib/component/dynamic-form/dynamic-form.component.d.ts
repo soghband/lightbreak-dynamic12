@@ -91,3 +91,4 @@ export declare class DynamicFormComponent implements OnInit {
     getSavePoint(savePointName?: string): void;
     getParam(rowIndex?: number): {};
 }
+//# sourceMappingURL=dynamic-form.component.d.ts.map

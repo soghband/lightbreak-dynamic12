@@ -14,3 +14,4 @@ export declare class AnimationService {
     setOnReRender(rerenderStatus: any): void;
     setEnableAnimation(enable: any): void;
 }
+//# sourceMappingURL=animation.service.d.ts.map

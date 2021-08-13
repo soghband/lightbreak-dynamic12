@@ -18,3 +18,4 @@ export declare class StepTabComponent implements OnInit {
     gotoStep(stepIndex: any): void;
     private gotoStepClick;
 }
+//# sourceMappingURL=step-tab.component.d.ts.map

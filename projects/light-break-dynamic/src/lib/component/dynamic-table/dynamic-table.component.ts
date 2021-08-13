@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angula
 import {TableComponent} from './table/table.component';
 
 @Component({
-	selector: 'lb9-dynamic-table',
+	selector: 'lb12-dynamic-table',
 	templateUrl: './dynamic-table.component.html'
 })
 export class DynamicTableComponent implements OnInit {

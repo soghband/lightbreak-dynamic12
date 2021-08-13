@@ -31,27 +31,28 @@ export declare class DynamicInputComponent implements OnInit {
     panelCallBack: EventEmitter<any>;
     instantInput: InputComponent;
     componentTypes: {
-        'textBox': typeof TextBoxComponent;
-        'textArea': typeof TextAreaComponent;
-        'label': typeof LabelComponent;
-        'checkBox': typeof CheckBoxComponent;
-        'colorSelect': typeof ColorSelectComponent;
-        'selectBox': typeof SelectBoxComponent;
-        'hidden': typeof HiddenComponent;
-        'fileUpload': typeof FileUploadComponent;
-        'image': typeof ImageComponent;
-        'autoComplete': typeof AutoCompleteComponent;
-        'button': typeof ButtonComponent;
-        'buttonIcon': typeof ButtonIconComponent;
-        'swappingBox': typeof SwappingBoxComponent;
-        'mapValue': typeof MapValueComponent;
-        'radio': typeof RadioComponent;
-        'date': typeof DateComponent;
-        'number': typeof TextBoxComponent;
-        'password': typeof TextBoxComponent;
+        textBox: typeof TextBoxComponent;
+        textArea: typeof TextAreaComponent;
+        label: typeof LabelComponent;
+        checkBox: typeof CheckBoxComponent;
+        colorSelect: typeof ColorSelectComponent;
+        selectBox: typeof SelectBoxComponent;
+        hidden: typeof HiddenComponent;
+        fileUpload: typeof FileUploadComponent;
+        image: typeof ImageComponent;
+        autoComplete: typeof AutoCompleteComponent;
+        button: typeof ButtonComponent;
+        buttonIcon: typeof ButtonIconComponent;
+        swappingBox: typeof SwappingBoxComponent;
+        mapValue: typeof MapValueComponent;
+        radio: typeof RadioComponent;
+        date: typeof DateComponent;
+        number: typeof TextBoxComponent;
+        password: typeof TextBoxComponent;
     };
     constructor(componentFactoryResolver: ComponentFactoryResolver, animationService: AnimationService);
     ngOnInit(): void;
     createComponent(): void;
     processCall(data: any): void;
 }
+//# sourceMappingURL=dynamic-input.component.d.ts.map

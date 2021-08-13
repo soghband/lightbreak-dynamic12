@@ -7,3 +7,4 @@ export declare class PanelMainComponent implements OnInit {
     constructor();
     ngOnInit(): void;
 }
+//# sourceMappingURL=panel-main.component.d.ts.map

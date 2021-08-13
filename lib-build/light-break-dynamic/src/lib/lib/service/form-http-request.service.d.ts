@@ -17,3 +17,4 @@ export declare class FormHttpRequestService {
     post(payload: any): import("rxjs").Observable<Object>;
     getConfig(module: any): import("rxjs").Observable<Object>;
 }
+//# sourceMappingURL=form-http-request.service.d.ts.map

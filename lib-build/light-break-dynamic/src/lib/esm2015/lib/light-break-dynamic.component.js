@@ -1,20 +1,18 @@
-import { __decorate, __metadata } from "tslib";
 import { Component } from '@angular/core';
-let LightBreakDynamicComponent = class LightBreakDynamicComponent {
+export class LightBreakDynamicComponent {
     constructor() { }
     ngOnInit() {
     }
-};
-LightBreakDynamicComponent = __decorate([
-    Component({
-        selector: 'lib-LightBreakDynamic',
-        template: `
+}
+LightBreakDynamicComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'lib-LightBreakDynamic',
+                template: `
     <p>
       light-break-dynamic works!
     </p>
   `
-    }),
-    __metadata("design:paramtypes", [])
-], LightBreakDynamicComponent);
-export { LightBreakDynamicComponent };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGlnaHQtYnJlYWstZHluYW1pYy5jb21wb25lbnQuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AZ29kaWdpdC9saWdodC1icmVhay1keW5hbWljLyIsInNvdXJjZXMiOlsibGliL2xpZ2h0LWJyZWFrLWR5bmFtaWMuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsU0FBUyxFQUFVLE1BQU0sZUFBZSxDQUFDO0FBV2xELElBQWEsMEJBQTBCLEdBQXZDLE1BQWEsMEJBQTBCO0lBRXJDLGdCQUFnQixDQUFDO0lBRWpCLFFBQVE7SUFDUixDQUFDO0NBRUYsQ0FBQTtBQVBZLDBCQUEwQjtJQVR0QyxTQUFTLENBQUM7UUFDVCxRQUFRLEVBQUUsdUJBQXVCO1FBQ2pDLFFBQVEsRUFBRTs7OztHQUlUO0tBRUYsQ0FBQzs7R0FDVywwQkFBMEIsQ0FPdEM7U0FQWSwwQkFBMEIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIE9uSW5pdCB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdsaWItTGlnaHRCcmVha0R5bmFtaWMnLFxuICB0ZW1wbGF0ZTogYFxuICAgIDxwPlxuICAgICAgbGlnaHQtYnJlYWstZHluYW1pYyB3b3JrcyFcbiAgICA8L3A+XG4gIGAsXG4gIHN0eWxlczogW11cbn0pXG5leHBvcnQgY2xhc3MgTGlnaHRCcmVha0R5bmFtaWNDb21wb25lbnQgaW1wbGVtZW50cyBPbkluaXQge1xuXG4gIGNvbnN0cnVjdG9yKCkgeyB9XG5cbiAgbmdPbkluaXQoKTogdm9pZCB7XG4gIH1cblxufVxuIl19
+            },] }
+];
+LightBreakDynamicComponent.ctorParameters = () => [];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGlnaHQtYnJlYWstZHluYW1pYy5jb21wb25lbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi9wcm9qZWN0cy9saWdodC1icmVhay1keW5hbWljL3NyYy9saWIvbGlnaHQtYnJlYWstZHluYW1pYy5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBVSxNQUFNLGVBQWUsQ0FBQztBQVdsRCxNQUFNLE9BQU8sMEJBQTBCO0lBRXJDLGdCQUFnQixDQUFDO0lBRWpCLFFBQVE7SUFDUixDQUFDOzs7WUFkRixTQUFTLFNBQUM7Z0JBQ1QsUUFBUSxFQUFFLHVCQUF1QjtnQkFDakMsUUFBUSxFQUFFOzs7O0dBSVQ7YUFFRiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgT25Jbml0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2xpYi1MaWdodEJyZWFrRHluYW1pYycsXG4gIHRlbXBsYXRlOiBgXG4gICAgPHA+XG4gICAgICBsaWdodC1icmVhay1keW5hbWljIHdvcmtzIVxuICAgIDwvcD5cbiAgYCxcbiAgc3R5bGVzOiBbXVxufSlcbmV4cG9ydCBjbGFzcyBMaWdodEJyZWFrRHluYW1pY0NvbXBvbmVudCBpbXBsZW1lbnRzIE9uSW5pdCB7XG5cbiAgY29uc3RydWN0b3IoKSB7IH1cblxuICBuZ09uSW5pdCgpOiB2b2lkIHtcbiAgfVxuXG59XG4iXX0=

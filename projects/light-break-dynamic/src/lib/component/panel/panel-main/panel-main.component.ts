@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'lb9-panel-main',
+  selector: 'lb12-panel-main',
   templateUrl: './panel-main.component.html',
   styleUrls: ['./panel-main.component.scss']
 })

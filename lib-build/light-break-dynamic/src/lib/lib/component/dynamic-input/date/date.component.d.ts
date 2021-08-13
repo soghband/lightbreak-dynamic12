@@ -40,3 +40,4 @@ export declare class DateComponent extends DynamicBehaviorComponent implements O
     setFocus(data: any): void;
     openCalendar(data: any, index: any): void;
 }
+//# sourceMappingURL=date.component.d.ts.map

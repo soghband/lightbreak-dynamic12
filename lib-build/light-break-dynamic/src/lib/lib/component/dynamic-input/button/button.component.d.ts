@@ -19,3 +19,4 @@ export declare class ButtonComponent extends DynamicBehaviorComponent implements
     processClick(event: any, action: any, dataIndex: any, valueList: any): void;
     disableList(value: any): boolean;
 }
+//# sourceMappingURL=button.component.d.ts.map

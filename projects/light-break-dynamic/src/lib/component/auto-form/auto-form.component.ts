@@ -4,7 +4,7 @@ import {FormHttpRequestService} from '../../service/form-http-request.service';
 import {LockScreenService} from '../../service/lock-screen.service';
 
 @Component({
-  selector: 'lb9-auto-form',
+  selector: 'lb12-auto-form',
   templateUrl: './auto-form.component.html',
   styleUrls: ['./auto-form.component.css']
 })

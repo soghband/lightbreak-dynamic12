@@ -36,3 +36,4 @@ export declare class SwappingBoxComponent extends DynamicBehaviorComponent imple
     selectAll(): void;
     toggleFilter(): void;
 }
+//# sourceMappingURL=swapping-box.component.d.ts.map

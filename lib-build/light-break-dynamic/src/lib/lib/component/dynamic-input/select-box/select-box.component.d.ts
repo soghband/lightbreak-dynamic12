@@ -20,3 +20,4 @@ export declare class SelectBoxComponent extends DynamicBehaviorComponent impleme
     processChange(event: any, action: any, dataIndex: any): void;
     checkValueList(valueList: any): boolean;
 }
+//# sourceMappingURL=select-box.component.d.ts.map

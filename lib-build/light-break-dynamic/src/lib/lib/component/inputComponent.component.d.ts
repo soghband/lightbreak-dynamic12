@@ -14,3 +14,4 @@ export declare class InputComponent {
     panelCallBack: EventEmitter<any>;
     processCall(data: any): void;
 }
+//# sourceMappingURL=inputComponent.component.d.ts.map

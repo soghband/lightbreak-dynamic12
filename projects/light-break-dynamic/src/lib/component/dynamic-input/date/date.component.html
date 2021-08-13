@@ -1,8 +1,8 @@
 <div class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}" [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
-    <lb9-dynamic-form-label-panel
+    <lb12-dynamic-form-label-panel
             [fieldCreation]="fieldCreation"
             [option]="option"
-            [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+            [width]="getLabelWidth()"></lb12-dynamic-form-label-panel>
     <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
         <ng-container *ngFor="let dataIndex of objKeys(data[fieldCreation.fieldName])">
             <div class="posRelative {{fieldCreation.require && data[fieldCreation.fieldName][dataIndex].value == '' ? 'require' : ''}}">
@@ -23,7 +23,7 @@
                        placeholder="{{fieldCreation.placeholder}}"/>
                 <div class="dateToggle{{getDisable() ? ' disable' : ' enable'}}"
                      (click)="!getDisable() ? openCalendar(data[fieldCreation.fieldName][dataIndex].value, dataIndex) : null"><span class="glyphicon glyphicon-calendar"></span></div>
-                <lb9-date-picker #datePicker
+                <lb12-date-picker #datePicker
                                  (setDate)="setDate($event,dataIndex)"
                                  (inputFocus)="setFocus($event,dataIndex)"
                                  [monthListLong]="fieldCreation.monthListLong"
@@ -32,7 +32,7 @@
                                  [showToday]="fieldCreation.showToday"
                                  [todayText]="fieldCreation.todayText"
                                  [closeOnDateSelect]="fieldCreation.closeOnDateSelect"
-                                 [yearOffset]="fieldCreation.yearOffset"></lb9-date-picker>
+                                 [yearOffset]="fieldCreation.yearOffset"></lb12-date-picker>
                 <div *ngIf="fieldCreation.multiValue && !(getDisable())"
                      class="deleteBtnWithDate"
                      (click)="deleteMultiVal(dataIndex)"><span class="glyphicon glyphicon-minus"></span></div>

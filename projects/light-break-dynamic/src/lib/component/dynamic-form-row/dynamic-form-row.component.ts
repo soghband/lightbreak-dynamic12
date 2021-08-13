@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output, QueryList, ViewChildren}
 import {DynamicContainerComponent} from '../dynamic-container/dynamic-container.component';
 
 @Component({
-    selector: 'lb9-dynamic-form-row',
+    selector: 'lb12-dynamic-form-row',
     templateUrl: './dynamic-form-row.component.html',
 })
 export class DynamicFormRowComponent implements OnInit {

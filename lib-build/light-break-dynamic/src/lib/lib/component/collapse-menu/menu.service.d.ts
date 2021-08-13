@@ -6,3 +6,4 @@ export declare class MenuService {
     setMenu(menu: any): void;
     getMenu(): string;
 }
+//# sourceMappingURL=menu.service.d.ts.map

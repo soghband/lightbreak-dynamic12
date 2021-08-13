@@ -34,5 +34,6 @@ export declare class TableComponent implements OnInit, OnChanges {
     getCheckedList(): any[];
     clearCheckList(): void;
     checkActionAll(): void;
-    checkIgnore(rowIndex: any): any;
+    checkIgnore(rowIndex: any): boolean;
 }
+//# sourceMappingURL=table.component.d.ts.map

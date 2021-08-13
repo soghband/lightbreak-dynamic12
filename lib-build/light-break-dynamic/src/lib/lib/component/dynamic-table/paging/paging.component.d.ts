@@ -31,3 +31,4 @@ export declare class PagingComponent implements OnInit {
     genPageArray(): any[];
     changeRowLimit(): void;
 }
+//# sourceMappingURL=paging.component.d.ts.map

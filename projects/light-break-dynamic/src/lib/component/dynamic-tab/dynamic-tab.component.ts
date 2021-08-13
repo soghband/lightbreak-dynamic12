@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {isString} from '@angular-package/type';
 
 @Component({
-	selector: 'lb9-dynamic-tab',
+	selector: 'lb12-dynamic-tab',
 	templateUrl: './dynamic-tab.component.html'
 })
 export class DynamicTabComponent implements OnInit {

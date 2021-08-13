@@ -3,7 +3,7 @@ import {NgScrollbar} from 'ngx-scrollbar';
 import {timer} from 'rxjs';
 
 @Component({
-  selector: 'lb9-side-bar',
+  selector: 'lb12-side-bar',
   templateUrl: './side-bar.component.html',
   styleUrls: ['./side-bar.component.scss']
 })

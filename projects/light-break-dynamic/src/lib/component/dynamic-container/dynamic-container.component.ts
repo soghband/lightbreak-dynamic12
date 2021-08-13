@@ -3,7 +3,7 @@ import {DynamicInputComponent} from "../dynamic-input/dynamic-input.component";
 import {timer} from 'rxjs';
 
 @Component({
-	selector: 'lb9-dynamic-container',
+	selector: 'lb12-dynamic-container',
 	templateUrl: './dynamic-container.component.html'
 })
 export class DynamicContainerComponent implements OnInit {

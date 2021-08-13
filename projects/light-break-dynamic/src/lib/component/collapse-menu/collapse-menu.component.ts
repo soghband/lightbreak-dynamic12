@@ -1,7 +1,7 @@
 import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 
 @Component({
-  selector: 'lb9-collapse-menu',
+  selector: 'lb12-collapse-menu',
   templateUrl: './collapse-menu.component.html',
   styleUrls: ['./collapse-menu.component.css']
 })

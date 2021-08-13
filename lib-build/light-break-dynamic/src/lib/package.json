@@ -1,24 +1,23 @@
 {
-  "name": "@godigit/light-break-dynamic",
-  "version": "0.1.39",
+  "name": "@lightbreak/ng-form",
+  "version": "1.0.0-beta",
   "peerDependencies": {
-    "@angular/common": "^9.0.2",
-    "@angular/core": "^9.0.2",
-    "tslib": "^1.10.0"
+    "@angular/common": "~12.2.1",
+    "@angular/core": "~12.2.1"
   },
   "dependencies": {
-    "@angular/cdk": "~9.0.1",
-    "ngx-scrollbar": "^7.2.0",
-    "rxjs-compat": "^6.4.0"
+    "@angular-package/type": "^4.2.0",
+    "@angular/cdk": "^9.0.1",
+    "ngx-scrollbar": "~7.2.0",
+    "rxjs-compat": "^6.4.0",
+    "tslib": "^2.0.0"
   },
-  "main": "bundles/godigit-light-break-dynamic.umd.js",
-  "module": "fesm5/godigit-light-break-dynamic.js",
-  "es2015": "fesm2015/godigit-light-break-dynamic.js",
-  "esm5": "esm5/godigit-light-break-dynamic.js",
-  "esm2015": "esm2015/godigit-light-break-dynamic.js",
-  "fesm5": "fesm5/godigit-light-break-dynamic.js",
-  "fesm2015": "fesm2015/godigit-light-break-dynamic.js",
-  "typings": "godigit-light-break-dynamic.d.ts",
-  "metadata": "godigit-light-break-dynamic.metadata.json",
+  "main": "bundles/lightbreak-ng-form.umd.js",
+  "module": "fesm2015/lightbreak-ng-form.js",
+  "es2015": "fesm2015/lightbreak-ng-form.js",
+  "esm2015": "esm2015/lightbreak-ng-form.js",
+  "fesm2015": "fesm2015/lightbreak-ng-form.js",
+  "typings": "lightbreak-ng-form.d.ts",
+  "metadata": "lightbreak-ng-form.metadata.json",
   "sideEffects": false
 }

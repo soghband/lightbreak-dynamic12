@@ -22,3 +22,4 @@ export declare class DynamicBehaviorComponent {
     getDisable(): boolean;
     processPanelCallBack(event: any): void;
 }
+//# sourceMappingURL=dynamic-behavior.component.d.ts.map

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    selector: 'lb9-step-tab',
+    selector: 'lb12-step-tab',
     templateUrl: './step-tab.component.html',
     styleUrls: ['./step-tab.component.scss']
 })

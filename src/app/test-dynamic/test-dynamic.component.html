@@ -1,9 +1,9 @@
 <div class="p2DynamicTabPanel">
-    <lb9-dynamic-tab #tabListRefId [tabCreation]="tabCreation" (callBack)="processCallBack($event)"></lb9-dynamic-tab>
+    <lb12-dynamic-tab #tabListRefId [tabCreation]="tabCreation" (callBack)="processCallBack($event)"></lb12-dynamic-tab>
     <div class="tabContentPanel {{tabListRef.getCssStatus('Content Panel')}}">
         <div *ngIf="contentActive">
-            <lb9-content-panel [panelData]="testData">
-            </lb9-content-panel>
+            <lb12-content-panel [panelData]="testData">
+            </lb12-content-panel>
         </div>
         <div class="btn-style-dynamic" (click)="toggleContent()">toggle</div>
     </div>
@@ -26,16 +26,16 @@
     <div class="tabContentPanel {{tabListRef.getCssStatus('Component')}}">
         <div class="btn-style-dynamic" (click)="contentPop.showPopup()">test content popup</div>
         <div class="btn-style-dynamic" (click)="contentPopCloseBtn.showPopup()">test content popup 2</div>
-        <lb9-content-popup #contentPop [header]="'Test Header'" [footer]="'Test Footer'" (callBack)="processCallBack($event)">
+        <lb12-content-popup #contentPop [header]="'Test Header'" [footer]="'Test Footer'" (callBack)="processCallBack($event)">
             <app-example-content></app-example-content>
-        </lb9-content-popup>
-        <lb9-content-popup #contentPopCloseBtn [header]="'Test Header 2'" [footer]="'Test Footer 2'" [closeByButtonOnly]="true" (callBack)="processCallBack($event)">
+        </lb12-content-popup>
+        <lb12-content-popup #contentPopCloseBtn [header]="'Test Header 2'" [footer]="'Test Footer 2'" [closeByButtonOnly]="true" (callBack)="processCallBack($event)">
             <app-example-content></app-example-content>
-        </lb9-content-popup>
-        <lb9-collapse [header]="'test Header'">
+        </lb12-content-popup>
+        <lb12-collapse [header]="'test Header'">
             <app-example-content></app-example-content>
-        </lb9-collapse>
-        <lb9-step-tab #stepA [tabList]="stepTab" (callBack)="processCallBack($event)"></lb9-step-tab>
+        </lb12-collapse>
+        <lb12-step-tab #stepA [tabList]="stepTab" (callBack)="processCallBack($event)"></lb12-step-tab>
         <div class="{{stepA.getActive(0)}}">Step 1</div>
         <div class="{{stepA.getActive(1)}}">Step 2</div>
         <div class="{{stepA.getActive(2)}}">Step 3</div>
@@ -46,7 +46,7 @@
         <div class="btn-style-dynamic" (click)="stepA.gotoStep(0)">test jump Step 1</div>
     </div>
     <div class="tabContentPanel {{tabListRef.getCssStatus('Form')}}">
-        <lb9-dynamic-form #dynamicForm [formCreation]="formCreation" [model]="model" (callBack)="processCallBack($event)"></lb9-dynamic-form>
+        <lb12-dynamic-form #dynamicForm [formCreation]="formCreation" [model]="model" (callBack)="processCallBack($event)"></lb12-dynamic-form>
         <div (click)="checkData()" class="btn-style-dynamic">check</div>
         <div class="btn-style-dynamic" (click)="testSetAttribute()">test set attribute</div>
         <div class="btn-style-dynamic" (click)="testGetAttribute()">test get attribute</div>
@@ -66,7 +66,7 @@
         <div class="btn-style-dynamic" (click)="testSetDefault()">set Default</div>
     </div>
     <div class="tabContentPanel {{tabListRef.getCssStatus('Form Table')}}">
-        <lb9-dynamic-form #dynamicFormTable [formCreation]="formCreationTable" (callBack)="processCallBack($event)"></lb9-dynamic-form>
+        <lb12-dynamic-form #dynamicFormTable [formCreation]="formCreationTable" (callBack)="processCallBack($event)"></lb12-dynamic-form>
         <div (click)="checkDataTable()" class="btn-style-dynamic">check</div>
         <div class="btn-style-dynamic" (click)="testEnableFormRow()">test Enable Row 0</div>
         <div class="btn-style-dynamic" (click)="testDisableFormRow()">test Disable Row 0</div>
@@ -87,7 +87,7 @@
 <!--        <div class="btn-style-dynamic" (click)="testDelete()">test Delete NG9</div>-->
     </div>
     <div class="tabContentPanel {{tabListRef.getCssStatus('Table')}}">
-        <lb9-dynamic-table [tableCreation]="tableCreation" #tableId (callBack)="processCallBack($event)"></lb9-dynamic-table>
+        <lb12-dynamic-table [tableCreation]="tableCreation" #tableId (callBack)="processCallBack($event)"></lb12-dynamic-table>
         <div class="btn-style-dynamic" (click)="getTableCheckList()">test get checkedList</div>
         <div class="btn-style-dynamic" (click)="clearTableCheckList()">test clear checkedList</div>
     </div>
@@ -103,8 +103,8 @@
         <div class="btn-style-dynamic" (click)="testNextTab()">next Tab</div>
     </div>
 </div>
-<lb9-error-msg-bubble #errorBubble></lb9-error-msg-bubble>
-<lb9-dynamic-popup #p2popup (callback)="popupCallback($event)"></lb9-dynamic-popup>
-<lb9-paging *ngIf="tableCreation.showPaging" [currentPage]="1"
+<lb12-error-msg-bubble #errorBubble></lb12-error-msg-bubble>
+<lb12-dynamic-popup #p2popup (callback)="popupCallback($event)"></lb12-dynamic-popup>
+<lb12-paging *ngIf="tableCreation.showPaging" [currentPage]="1"
             [totalPage]="5"
-            [totalRecord]="255"></lb9-paging>
+            [totalRecord]="255"></lb12-paging>

@@ -2,7 +2,7 @@ import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {PanelData} from './panel-data';
 
 @Component({
-  selector: 'lb9-content-panel',
+  selector: 'lb12-content-panel',
   templateUrl: './content-panel.component.html',
   styleUrls: ['./content-panel.component.css']
 })

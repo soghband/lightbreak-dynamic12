@@ -3,7 +3,7 @@ import {SlideInOutAnimation} from './animetion';
 import {timer} from 'rxjs';
 
 @Component({
-	selector: 'lb9-collapse',
+	selector: 'lb12-collapse',
 	templateUrl: './collapse.component.html',
 	styleUrls: ['./collapse.component.scss'],
 	animations: [SlideInOutAnimation]

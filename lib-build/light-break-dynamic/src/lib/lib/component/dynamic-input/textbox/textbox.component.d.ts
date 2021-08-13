@@ -25,3 +25,4 @@ export declare class TextBoxComponent extends DynamicBehaviorComponent implement
     processBlur(event: any, action: any, dataIndex: any): boolean;
     getType(): "password" | "number" | "textbox";
 }
+//# sourceMappingURL=textbox.component.d.ts.map

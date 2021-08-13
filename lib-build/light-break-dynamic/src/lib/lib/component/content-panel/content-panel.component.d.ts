@@ -6,3 +6,4 @@ export declare class ContentPanelComponent implements OnInit, OnDestroy {
     ngOnInit(): void;
     ngOnDestroy(): void;
 }
+//# sourceMappingURL=content-panel.component.d.ts.map

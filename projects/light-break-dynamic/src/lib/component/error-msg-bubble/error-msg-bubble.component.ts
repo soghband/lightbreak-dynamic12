@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-	selector: 'lb9-error-msg-bubble',
+	selector: 'lb12-error-msg-bubble',
 	templateUrl: './error-msg-bubble.component.html',
 	styleUrls: ['./error-msg-bubble.component.css']
 })

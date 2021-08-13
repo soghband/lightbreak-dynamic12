@@ -30,3 +30,4 @@ export declare class CheckBoxComponent extends DynamicBehaviorComponent implemen
     toggleShowCheckBox(): void;
     haveChecked(): boolean;
 }
+//# sourceMappingURL=check-box.component.d.ts.map

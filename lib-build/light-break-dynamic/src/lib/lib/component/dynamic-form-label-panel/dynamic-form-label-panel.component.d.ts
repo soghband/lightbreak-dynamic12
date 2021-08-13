@@ -9,3 +9,4 @@ export declare class DynamicFormLabelPanelComponent implements OnInit {
     getLabelDisplay(): "" | "dp2hide" | "singleLine";
     processPanelCallBack(event: any): void;
 }
+//# sourceMappingURL=dynamic-form-label-panel.component.d.ts.map

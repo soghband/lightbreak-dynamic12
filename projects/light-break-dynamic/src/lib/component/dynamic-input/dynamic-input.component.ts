@@ -19,7 +19,7 @@ import {AnimationService} from '../../service/animation.service';
 import {ColorSelectComponent} from './color-select/color-select.component';
 
 @Component({
-    selector: 'lb9-dynamic-input',
+    selector: 'lb12-dynamic-input',
     templateUrl: './dynamic-input.component.html'
 })
 export class DynamicInputComponent implements OnInit {

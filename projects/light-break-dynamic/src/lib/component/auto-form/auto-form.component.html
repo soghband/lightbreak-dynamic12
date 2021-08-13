@@ -3,7 +3,7 @@
         <div class="searchPanelRow{{(config.module && config.module.list && config.filter && config.filter.paramList && config.filter.paramList.length > 0 ? '': ' hide')}}">
             <div class="searchInput">
                 <ng-container *ngIf="filter.form && filter.form.containerList">
-                    <lb9-dynamic-form #filterForm [formCreation]="filter" [model]="model"></lb9-dynamic-form>
+                    <lb12-dynamic-form #filterForm [formCreation]="filter" [model]="model"></lb12-dynamic-form>
                 </ng-container>
             </div>
             <div class="searchAdvBtn" *ngIf="config.filterAdvance">
@@ -20,28 +20,28 @@
     </div>
     <div *ngIf="config.module && config.module.add" class="btn-style-dynamic" (click)="openAddForm()" [innerHTML]="button.add"></div>
     <div class="{{config.module && config.module.list ? '': ' hide'}}">
-        <lb9-dynamic-table #dynamicTable [tableCreation]="dataList" (callBack)="processListCallback($event)"></lb9-dynamic-table>
+        <lb12-dynamic-table #dynamicTable [tableCreation]="dataList" (callBack)="processListCallback($event)"></lb12-dynamic-table>
     </div>
 </div>
-<lb9-content-popup #formPopUp [header]="(mode == 'add' ? (config.content ? config.content.addHeader : '') : (config.content ? config.content.editHeader : ''))"
+<lb12-content-popup #formPopUp [header]="(mode == 'add' ? (config.content ? config.content.addHeader : '') : (config.content ? config.content.editHeader : ''))"
                    [closeByButtonOnly]="true"
                    [noScroll]="true">
     <ng-container *ngIf="form.form && form.form.containerList">
-        <lb9-dynamic-form  #dynamicForm [formCreation]="form" [model]="model"></lb9-dynamic-form>
+        <lb12-dynamic-form  #dynamicForm [formCreation]="form" [model]="model"></lb12-dynamic-form>
         <div class="btnPanel">
             <div class="btn-style-dynamic" (click)="save()" [innerHTML]="button.save"></div>
             <div *ngIf="mode == 'add'" class="btn-style-dynamic clearBtn" (click)="clearForm()" [innerHTML]="button.clear"></div>
             <div *ngIf="mode == 'edit'" class="btn-style-dynamic clearBtn" (click)="resetForm()" [innerHTML]="button.reset"></div>
         </div>
     </ng-container>
-</lb9-content-popup>
-<lb9-content-popup #confirmPopUp [header]="config.content ? config.content.confirmDeleteHeader : ''">
+</lb12-content-popup>
+<lb12-content-popup #confirmPopUp [header]="config.content ? config.content.confirmDeleteHeader : ''">
     <div class="btn-style-dynamic" (click)="confirmDelete()" [innerHTML]="button.confirm"></div>
     <div class="btn-style-dynamic clearBtn" (click)="confirmPopUp.closePopup(true)" [innerHTML]="button.cancel"></div>
-</lb9-content-popup>
-<lb9-content-popup #errorPopUp [header]="'Error'">
+</lb12-content-popup>
+<lb12-content-popup #errorPopUp [header]="'Error'">
     <div>{{errorContent}}</div>
     <div class="btnPanel">
         <div class="btn-style-dynamic text-center" (click)="actKnownError()" [innerHTML]="button.confirm"></div>
     </div>
-</lb9-content-popup>
+</lb12-content-popup>

@@ -8,3 +8,4 @@ export declare class DynamicFormFrameComponent implements OnInit {
     ngOnInit(): void;
     deleteRowProcess(): void;
 }
+//# sourceMappingURL=dynamic-form-frame.component.d.ts.map

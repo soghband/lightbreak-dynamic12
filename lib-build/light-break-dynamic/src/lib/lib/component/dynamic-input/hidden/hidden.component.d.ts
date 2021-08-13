@@ -18,3 +18,4 @@ export declare class HiddenComponent extends DynamicBehaviorComponent implements
     ngOnInit(): void;
     processCall(data: any): void;
 }
+//# sourceMappingURL=hidden.component.d.ts.map

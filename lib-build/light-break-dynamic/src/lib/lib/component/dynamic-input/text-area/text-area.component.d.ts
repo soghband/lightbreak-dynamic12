@@ -18,3 +18,4 @@ export declare class TextAreaComponent extends DynamicBehaviorComponent implemen
     ngOnInit(): void;
     processCall(data: any): void;
 }
+//# sourceMappingURL=text-area.component.d.ts.map

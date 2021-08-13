@@ -1,19 +1,18 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {Observable} from 'rxjs/Observable';
 import {ErrorMsgBubbleComponent} from '../../../projects/light-break-dynamic/src/lib/component/error-msg-bubble/error-msg-bubble.component';
 import {DynamicFormComponent} from '../../../projects/light-break-dynamic/src/lib/component/dynamic-form/dynamic-form.component';
 import {DynamicTabComponent} from '../../../projects/light-break-dynamic/src/lib/component/dynamic-tab/dynamic-tab.component';
 import {DynamicPopupComponent} from '../../../projects/light-break-dynamic/src/lib/component/dynamic-popup/dynamic-popup.component';
 import {DynamicTableComponent} from '../../../projects/light-break-dynamic/src/lib/component/dynamic-table/dynamic-table.component';
 import {LockScreenService} from '../../../projects/light-break-dynamic/src/lib/service/lock-screen.service';
-import { interval } from 'rxjs';
-import { take } from 'rxjs/operators';
+import { interval } from 'rxjs/internal/observable/interval';
+import { take } from 'rxjs/internal/operators';
 import {PanelData} from '../../../projects/light-break-dynamic/src/lib/component/content-panel/panel-data';
+import {OnInit, ViewChild, Component} from '@angular/core';
 
 
 @Component({
 	selector: 'app-test-dynamic',
-	templateUrl: './test-dynamic.component.html',
+	templateUrl: `./test-dynamic.component.html`,
 	// styleUrls: ['./test-dynamic.component.css'],
 })
 export class TestDynamicComponent implements OnInit {

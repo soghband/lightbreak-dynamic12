@@ -1,0 +1,17 @@
+<div id="errorBubble">
+    <div *ngIf="data.length > 0" class="errorMsgPanel">
+        <ng-container *ngFor="let i of objKeys(data)">
+            <div *ngIf="i < maxShow" class="errorRow">
+                {{data[i].msg}}
+            </div>
+        </ng-container>
+    </div>
+    <div *ngIf="data.length > 0" class="errorMsgSpace">
+        <ng-container *ngFor="let i of objKeys(data)">
+            <div *ngIf="i < maxShow" class="errorRowSpace">
+
+            </div>
+        </ng-container>
+    </div>
+</div>
+

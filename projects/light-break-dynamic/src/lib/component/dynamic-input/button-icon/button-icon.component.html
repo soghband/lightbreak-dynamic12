@@ -1,0 +1,18 @@
+<div class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}" [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
+  <lb9-dynamic-form-label-panel
+          [fieldCreation]="fieldCreation"
+          [option]="option"
+          [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+  <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
+    <ng-container *ngFor="let valueListIndex of objKeys(fieldCreation.valueList)">
+
+        <div class="icon {{(getDisable() ? 'icon-disable' : '')}}" id="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}{{(valueListIndex > 0 ? '_'+valueListIndex:'')}}" (click)="processClick($event,'click',valueListIndex,fieldCreation.valueList[valueListIndex])"
+             (mouseenter)="processCallBack($event,'mouseEnter',valueListIndex)"
+             (mouseleave)="processCallBack($event,'mouseLeave',valueListIndex)" [innerHTML]="fieldCreation.valueList[valueListIndex].display"></div>
+
+    </ng-container>
+    <div class="dp2Note" id="id_note_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}">
+      {{fieldCreation.note}}
+    </div>
+  </div>
+</div>

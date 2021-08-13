@@ -1,0 +1,27 @@
+<div class="lb9-dim" [@fadeInOut]="animationState" (click)="closePopup()">
+    <div class="popupPanel">
+        <div class="popupAlign">
+            <div class="popupContentTable">
+                <div class="popupContentRow">
+                    <div class="popupContentCell">
+                        <div class="popupContent{{customClass ? ' '+customClass: ''}}" (mouseover)="releaseContent()" (mouseout)="lockContent()">
+                            <div class="closeBtn">
+                                <abbr title="Close">
+                                    <span class="glyphicon glyphicon-remove" (click)="closePopup(true)"></span>
+                                </abbr>
+                            </div>
+                            <div *ngIf="header.length > 0" class="popupHeader" [innerHTML]="header">
+                            </div>
+                            <div class="popupContentDetail{{noScroll ? ' noScroll':' scroll'}}">
+                                <ng-content>
+                                </ng-content>
+                            </div>
+                            <div *ngIf="footer.length > 0" class="popupFooter" [innerHTML]="footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+<div *ngIf="fieldCreation.label != ''" class="dp2Label {{getLabelDisplay()}} {{option.labelAlign == 'left' ? 'vAlignTop alignRight' : ''}}"
+     [style.width]="width" (click)="processPanelCallBack($event)">
+  <div class="{{fieldCreation.require ? 'requireLabel':''}}" [innerHTML]="fieldCreation.label"></div>
+</div>

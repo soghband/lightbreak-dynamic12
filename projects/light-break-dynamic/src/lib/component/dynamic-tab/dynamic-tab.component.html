@@ -1,0 +1,5 @@
+<div class="{{tabCreation.option.customClass ? tabCreation.option.customClass:'dynamicTab'}}">
+  <div *ngFor="let i of objKeys(tabCreation.tabList)" (click)="processCallBack({tabNum:i,tabName:tabCreation.tabList[i]})" class="tabComponent {{currentTab == i ? 'active':'inactive'}}" id="dynamic_tab_{{tabCreation.tabList[i]}}">
+    {{tabCreation.tabList[i]}}
+  </div>
+</div>

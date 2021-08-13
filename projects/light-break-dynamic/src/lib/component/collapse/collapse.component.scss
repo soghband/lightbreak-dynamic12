@@ -1,0 +1,30 @@
+.lbCollapse {
+  margin-top: 10px;
+  .collapseHeaderPanel {
+    position: relative;
+    .collapseHeader {
+
+    }
+    .collapseArrow {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      width: 10px;
+      height: 10px;
+      border-top: 4px solid #666;
+      border-right: 4px solid #666;
+      transform: rotate(135deg);
+      transition: all 0.5s;
+    }
+  }
+  .active {
+    .collapseArrow {
+      transform: rotate(-45deg);
+      transition: all 0.5s;
+    }
+  }
+  .collapseContent {
+    width: 100%;
+    overflow: auto;
+  }
+}

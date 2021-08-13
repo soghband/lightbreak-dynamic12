@@ -1,0 +1,41 @@
+<div class="datePickerPanel" [@fadeInOut]="animationState" (mouseleave)="setInputFocus()" (mouseenter)="setCalendarFocus()">
+  <div class="datePickerAlign">
+    <div class="monthYearPanel">
+      <div class="monthYearDisplay">
+        <div class="monthYearAction" (click)="actionYearSelect()">{{monthListLong[month]}} {{(year + yearOffset)}} <span class="glyphicon glyphicon-collapse-down"></span></div>
+        <div class="prev" (click)="actionPrev()"><span class="glyphicon glyphicon-chevron-left"></span></div>
+        <div class="next" (click)="actionNext()"><span class="glyphicon glyphicon-chevron-right"></span></div>
+      </div>
+    </div>
+    <div class="dateTablePanel {{showDate ? 'showPanel':'hidePanel'}}">
+      <table class="dateTable">
+        <tr>
+          <th *ngFor="let day of weekDay">
+            {{day}}
+          </th>
+        </tr>
+        <ng-container *ngFor="let dateRow of dateList">
+          <tr>
+            <td *ngFor="let date of dateRow">
+              <div class="dateBtn{{month != date.month? ' otherMonth' : ''}} {{date.day == currentDate.day && date.year == currentDate.year && date.month == currentDate.month ? 'dateCurrent':'dateNormal'}}{{date.weekDay == '0' ? ' dateSun':''}}{{date.weekDay == '6' ? ' dateSat':''}}" (click)="selectDate(date)">
+                <div class="{{date.day == selectedDate.day && date.year == selectedDate.year && date.month == selectedDate.month ? 'selected':''}}" [innerHTML]="date.day"></div>
+              </div>
+            </td>
+          </tr>
+        </ng-container>
+      </table>
+    </div>
+    <div class="monthTablePanel {{showMonth ? 'showPanel':'hidePanel'}}">
+      <div *ngFor="let monthNameIndex of objKeys(monthListLong)" class="monthBtn" (click)="selectMonth(monthNameIndex)">{{monthListLong[monthNameIndex]}}</div>
+    </div>
+    <div class="yearTablePanel {{showYear ? 'showPanel':'hidePanel'}}">
+      <div *ngFor="let year of yearList" class="yearBtn" (click)="selectYear(year)">{{year + yearOffset}}</div>
+      <div class="prevYear" (click)="actionPrevYear()"><span class="glyphicon glyphicon-chevron-left"></span></div>
+      <div class="nextYear" (click)="actionNextYear()"><span class="glyphicon glyphicon-chevron-right"></span></div>
+    </div>
+    <div *ngIf="showToday" class="todayPanel">
+      <div class="todayBtn" [innerHTML]="todayText" (click)="selectToday()">
+      </div>
+    </div>
+  </div>
+</div>

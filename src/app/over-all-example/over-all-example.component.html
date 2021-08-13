@@ -1,0 +1,11 @@
+<lb9-side-bar>
+  <div sideBar><lb9-collapse-menu [menuObject]="menuData" [activeLinkCode]="activeCode" (callback)="menuCallback($event)" [role]="testRole"></lb9-collapse-menu></div>
+  <div topBar><app-header></app-header></div>
+  <div contentBody>
+    <div class="p2DynamicTabPanel">
+      <router-outlet>
+
+      </router-outlet>
+    </div>
+  </div>
+</lb9-side-bar>

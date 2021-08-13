@@ -1,0 +1,22 @@
+.specificationPanel {
+  padding: 5px;
+  box-sizing: border-box;
+  vertical-align: top;
+  display: inline-block;
+  width: calc(75vw - 280px); }
+  .specificationPanel .specificationHeader {
+    color: #ffffff;
+    padding: 0px 10px;
+    border: 1px solid #e2e3de;
+    display: inline-block;
+    margin-bottom: 3px;
+    border-radius: 20px;
+    background: #b4b4b4; }
+  .specificationPanel .specificationDetail .specification {
+    color: #9e9e9e; }
+  .specificationPanel .specificationDetail .parameterHeader {
+    color: #7e836f; }
+  .specificationPanel .specificationDetail .parameterPanel {
+    color: #9e9e9e; }
+    .specificationPanel .specificationDetail .parameterPanel pre {
+      color: #9e9e9e; }

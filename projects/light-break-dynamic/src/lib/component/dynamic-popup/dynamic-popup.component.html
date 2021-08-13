@@ -1,0 +1,22 @@
+<div class="dynamic-popup {{statusPopup}}" id="dynamicPopup">
+  <div class="foreground-close" (click)="close()"></div>
+  <div class="dynamic-popup-inside">
+    <div class="dynamic-popup-container">
+      <div class="dynamic-popup-header">
+        <p class="dynamic-popup-title">{{popupProperties.header}}</p>
+      </div>
+      <div class="dynamic-popup-body text-center">
+        <span class="glyphicon {{popupProperties.icon}} {{popupProperties.colorClass}}"></span>
+        <p id="messageLabel" class="data-msg" [innerHTML]="popupProperties.message"></p>
+      </div>
+      <div class="dynamic-popup-footer text-right">
+        <div *ngIf="popupProperties.type == 'confirm'" id="btnDynamicPopupConfirm" class="btn-style-dynamic btn-small"
+             (click)="confirm()"><span class="glyphicon glyphicon-ok"></span>
+          <span>OK</span></div>
+        <div id="btnDynamicPopupClose" class="btn-style-dynamic btn-small" data-dismiss="modal" aria-label="Close"
+             (click)="close()"><span
+          class="glyphicon glyphicon-remove-circle"></span> <span>Close</span></div>
+      </div>
+    </div>
+  </div>
+</div>

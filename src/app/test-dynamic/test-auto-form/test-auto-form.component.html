@@ -1,0 +1,9 @@
+<div *ngIf="active">
+    <lb9-auto-form #autoForm [formName]="'test'"
+                   [refinedListData]="refinedData"
+                   [refinedMasterData]="refinedMasterData"
+                   [refinedListPayload]="refinedListPayload"
+                   [refinedSaveData]="refinedSaveData"
+                   [refinedMasterDataPayload]="refinedMasterPayload"
+                    (callback)="callbackEvent($event)"></lb9-auto-form>
+</div>

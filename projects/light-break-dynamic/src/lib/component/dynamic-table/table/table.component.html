@@ -1,0 +1,70 @@
+<div id="dynamicTable" class="{{tableCreation.customClass ? tableCreation.customClass : ''}}">
+    <div class="header" id="head_brand_list">{{tableCreation.header}}</div>
+    <div class="scroll">
+        <table>
+            <tr>
+                <ng-container *ngIf="tableCreation.primaryField && tableCreation.showSelect && tableCreation.showSelect != 'none'">
+                    <th>
+                        <input *ngIf="tableCreation.showSelect == 'checkBox'" type="checkbox"  id="checkBox_select_all"
+                               [(ngModel)]="checkSelectAll"
+                               (change)="checkActionAll()" name="checkBox_all" >
+                    </th>
+                </ng-container>
+                <ng-container *ngFor="let dataIndex of objKeys(tableCreation.fieldList)">
+                    <th *ngIf="tableCreation.fieldList[dataIndex].hideHeader != true"
+                        id="id_{{getFieldId(tableCreation.fieldList[dataIndex].fieldName)}}_header"
+                        [colSpan]="tableCreation.fieldList[dataIndex].headerSpan ? tableCreation.fieldList[dataIndex].headerSpan : '1'"
+                        class="{{(tableCreation.sorting == true && tableCreation.fieldList[dataIndex].sorting != false? 'actionClick' : '')}}{{tableCreation.fieldList[dataIndex].thCustomClass ? ' '+tableCreation.fieldList[dataIndex].thCustomClass : ''}}"
+                        (click)="sortBy(dataIndex)">
+                        {{tableCreation.fieldList[dataIndex].displayHeader}}
+                        <span *ngIf="(sortField == tableCreation.fieldList[dataIndex].fieldNameDb || sortField == tableCreation.fieldList[dataIndex].fieldName) && tableCreation.sorting == true && tableCreation.fieldList[dataIndex].sorting != false"
+                             class="{{sortType == 'DESC' ? 'glyphicon glyphicon-sort-by-attributes-alt' : 'glyphicon glyphicon-sort-by-attributes'}}"></span>
+                    </th>
+                </ng-container>
+                <ng-container *ngIf="tableCreation.showDelete || tableCreation.showEdit">
+                    <th id="action" class="actionTh" [innerHTML]="tableCreation.actionHeader ? tableCreation.actionHeader: 'Action'">
+                    </th>
+                </ng-container>
+            </tr>
+            <tr *ngFor="let rowIndex of objKeys((tableCreation.data.data ? tableCreation.data.data :tableCreation.data))" class="table_class" id="id_row_{{tableCreation.tableId}}_{{rowIndex}}">
+                <ng-container *ngIf="tableCreation.primaryField && tableCreation.showSelect && tableCreation.showSelect != 'none'">
+                    <td id="select_{{rowIndex}}">
+                        <div *ngIf="!checkIgnore(rowIndex)">
+                            <input *ngIf="tableCreation.showSelect == 'checkBox'" type="checkbox" id="checkBox_{{rowIndex}}"
+                                   [(ngModel)]="checkData[getPrimary(rowIndex)]"
+                                   (change)="checkAction(rowIndex)" name="checkBox_{{rowIndex}}" >
+                            <input *ngIf="tableCreation.showSelect == 'radioBox'" type="radio"
+                                   value="{{getPrimary(rowIndex)}}"
+                                   name="tableRadio_{{tableCreation.tableId}}" id="radioBox_{{rowIndex}}"
+                                   [(ngModel)]="radioData"
+                                   (change)="radioAction(rowIndex)" >
+                        </div>
+                    </td>
+                </ng-container>
+                <ng-container *ngFor="let dataIndex of objKeys(tableCreation.fieldList)">
+                    <td id="id_{{getFieldId(tableCreation.fieldList[dataIndex].fieldName)}}_{{rowIndex}}_{{tableCreation.tableId}}"
+                        class="{{tableCreation.fieldList[dataIndex].align}} {{tableCreation.fieldList[dataIndex].tdCustomClass ? tableCreation.fieldList[dataIndex].tdCustomClass : ''}}">
+                        <div class="{{tableCreation.fieldList[dataIndex].dataStyle}}">
+                            <ng-container *ngIf="tableCreation.fieldList[dataIndex].action == false">
+                                <div [innerHTML]="getData(tableCreation.fieldList[dataIndex],rowIndex)"></div>
+                            </ng-container>
+                            <ng-container *ngIf="tableCreation.fieldList[dataIndex].action == true">
+                                <div class="dataAction" (click)="dataAction(rowIndex,tableCreation.fieldList[dataIndex].fieldName)" [innerHTML]="getData(tableCreation.fieldList[dataIndex],rowIndex)"></div>
+                            </ng-container>
+                        </div>
+                    </td>
+                </ng-container>
+                <ng-container *ngIf="tableCreation.showDelete || tableCreation.showEdit">
+                    <td id="action_{{rowIndex}}" class="actionTd">
+                        <span *ngIf="tableCreation.showEdit" class="btn-action edit" id="edit_{{rowIndex}}"
+                              (click)="editRow(rowIndex)"><span
+                                class="glyphicon glyphicon-edit"></span></span>
+                        <span *ngIf="tableCreation.showDelete" class="btn-action delete" id="delete_{{rowIndex}}"
+                              (click)="deleteRow(rowIndex)"><span
+                                class="glyphicon glyphicon-trash"></span></span>
+                    </td>
+                </ng-container>
+            </tr>
+        </table>
+    </div>
+</div>

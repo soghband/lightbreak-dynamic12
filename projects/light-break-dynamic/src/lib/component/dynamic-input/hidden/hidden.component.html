@@ -1,0 +1,3 @@
+<ng-container *ngFor="let dataIndex of objKeys(data[fieldCreation.fieldName])">
+    <input type="hidden" id="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}{{(dataIndex > 0 ? '_'+dataIndex:'')}}" name="{{fieldCreation.fieldName}}" [(ngModel)]="data[fieldCreation.fieldName][dataIndex]" [readonly]="option.mode == 'view'"/>
+</ng-container>

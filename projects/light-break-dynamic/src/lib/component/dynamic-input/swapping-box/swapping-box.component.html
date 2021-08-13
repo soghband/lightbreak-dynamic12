@@ -1,0 +1,54 @@
+<div *ngIf="data[fieldCreation.fieldName]" class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}"  [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
+    <lb9-dynamic-form-label-panel
+            [fieldCreation]="fieldCreation"
+            [option]="option"
+            [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+    <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
+            <div class="posRelative">
+                <div class="dp2Table">
+                    <div class="dp2Row">
+                        <div class="dp2Cell sourceBox {{getDisable() ? 'readonly' : ''}}">
+                            <div class="headerPanel">
+                                <div class="headText" [innerHTML]="optionText"></div>
+                                <div class="filterEnable" (click)="toggleFilter()"><span class="glyphicon glyphicon-search"></span></div>
+                                <input type="text" class="filter {{filterToggle}}"
+                                       [readOnly]="filterToggle == 'filterInvisible'"
+                                       [(ngModel)]="filter" placeholder="Filter"/>
+                            </div>
+                            <div class="source">
+                                <ng-container *ngFor="let valueIndex of objKeys(fieldCreation.valueList)">
+                                    <div class="source_select" *ngIf="checkDestData(fieldCreation.valueList[valueIndex])" (click)="transferData(valueIndex)" [innerHTML]="fieldCreation.valueList[valueIndex].display">
+
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                        <div class="dp2Cell iconBox">
+                            <abbr title="{{selectAllText}}">
+                                <div class="selectAll" (click)="selectAll()"><span class="glyphicon glyphicon-forward"></span></div>
+                            </abbr>
+                            <abbr title="{{removeAllText}}">
+                                <div class="removeAll" (click)="removeAll()"><span class="glyphicon glyphicon-backward"></span></div>
+                            </abbr>
+                        </div>
+                        <div class="dp2Cell sourceBox {{getDisable() ? 'readonly' : ''}}">
+                            <div class="headerPanel">
+                                <div class="headText" [innerHTML]="selectedText"></div>
+                            </div>
+                            <div class="destination">
+                                <ng-container *ngFor="let dataValueIndex of objKeys(data[fieldCreation.fieldName])">
+                                    <div class="source_select" (click)="removeData(dataValueIndex)" [innerHTML]="data[fieldCreation.fieldName][dataValueIndex].display">
+
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="dp2Note">
+            {{fieldCreation.note}}
+        </div>
+    </div>
+</div>
+<div *ngIf="!data[fieldCreation.fieldName]">Data undefined: {{fieldCreation.fieldName}}</div>

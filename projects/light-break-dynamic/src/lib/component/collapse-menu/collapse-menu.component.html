@@ -1,0 +1,18 @@
+<div *ngFor="let menuItem of menuObject.menuList;let i = index" class="menuList">
+    <div (click)="activeItem(i)" *ngIf="checkRole(i)"
+         class="menuItem{{activeLinkCode && activeLinkCode == menuItem.code && activeLinkCode != '' ? ' menuItemActive':''}}
+        {{menuItem.customClass ? ' '+menuItem.customClass:''}}"
+         [ngStyle]="{paddingLeft:padding, lineHeight:lineHeight}">
+        <div class="menuName" [innerHTML]="menuItem.name"></div>
+        <div [innerHTML]="menuItem.numberOfData" *ngIf="menuItem.numberOfData"></div>
+        <div class="menuArrow{{menuItem.active ? ' menuArrowExpand':''}}" *ngIf="menuItem.children"></div>
+    </div>
+    <div *ngIf="menuItem.children" class="menuChild" [ngStyle]="{height:getHeight(i)}">
+        <lb9-collapse-menu [menuObject]="menuItem.children"
+                           [activeLinkCode]="activeLinkCode"
+                           [level]="level+1"
+                           [option]="option"
+                           [role]="role"
+                           (callback)="childCallback($event)"></lb9-collapse-menu>
+    </div>
+</div>

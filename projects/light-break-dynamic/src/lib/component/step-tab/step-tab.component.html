@@ -1,0 +1,7 @@
+<div class="tabStepPanel">
+    <div *ngFor="let tabIndex of objKeys(tabList)" class="tabStep{{tabIndex == activeStep ? ' active': tabIndex < activeStep ? ' pass': tabIndex > activeStep ? ' inactive':''}}" [style.width]="tabIndex == lastTab ? '' : calculateCss" (click)="gotoStepClick(tabIndex)">
+        <div [innerHTML]="(tabIndex == activeStep ? tabList[tabIndex].header: tabIndex <= activeStep ? tabList[tabIndex].pass ? tabList[tabIndex].pass: tabList[tabIndex].header: tabList[tabIndex].header)" class="header" id="clickStepTab_{{tabIndex}}"></div>
+        <div *ngIf="tabIndex != lastTab" class="line"></div>
+        <div class="tabLabel{{tabIndex <= activeStep ? ' active':''}}" id="clickStepTab_label_{{tabIndex}}" [innerHTML]="tabList[tabIndex].label"></div>
+    </div>
+</div>

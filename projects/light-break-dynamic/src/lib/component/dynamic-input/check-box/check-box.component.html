@@ -1,0 +1,55 @@
+<div class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}" [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
+    <lb9-dynamic-form-label-panel
+            [fieldCreation]="fieldCreation"
+            [option]="option"
+            [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+    <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
+        <div class="posRelative">
+            <div *ngIf="option.displayMode == 'table'" class="checkBoxTableDisplay">
+                <ng-container *ngFor="let listIndex of objKey(fieldCreation.valueList)">
+                    <div *ngIf="data[fieldCreation.fieldName][fieldCreation.valueList[listIndex].value] && haveChecked()" class="checkBoxIndent {{singleLine}}">
+                        <input type="checkbox"
+                               id="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}_{{listIndex}}_{{option.formId}}_{{rowIndex}}_checked"
+                               name="{{fieldCreation.fieldName}}_{{listIndex}}"
+                               [(ngModel)]="data[fieldCreation.fieldName][fieldCreation.valueList[listIndex].value]"
+                               [disabled]="getDisable()"
+                               (change)="processChange($event,'change',fieldCreation.valueList[listIndex])">
+                        <label>{{fieldCreation.valueList[listIndex].display}}</label>
+                    </div>
+                </ng-container>
+                <div *ngIf="!haveChecked()">
+                    Not Selected
+                </div>
+            </div>
+            <div *ngIf="option.displayMode == 'table'" class="arrowToggle" (click)="toggleShowCheckBox()"  id="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}_{{option.formId}}_{{rowIndex}}_arrowDown">
+                <div class="arrowDown">
+
+                </div>
+            </div>
+            <div class="{{(option.displayMode == 'table' ? 'checkboxList' : '')}} {{checkboxDisplay}}">
+                <div class="{{(option.displayMode == 'table' ? 'checkboxListBox' : '')}}">
+                    <div class="{{showSelectAll}}">
+                        <input type="checkbox" id="id_{{fieldCreation.fieldName}}_selectAll_{{option.formId}}_{{rowIndex}}"
+                               name="{{fieldCreation.fieldName}}_selectAll_{{option.formId}}_{{rowIndex}}" (change)="toggleSelectAll()"
+                               [disabled]="getDisable()"
+                               [(ngModel)]="selectAll"> <label for="id_{{fieldCreation.fieldName}}_selectAll_{{option.formId}}_{{rowIndex}}">Select All</label>
+                    </div>
+                    <ng-container *ngFor="let listIndex of objKey(fieldCreation.valueList)">
+                        <div class="checkBoxIndent {{singleLine}}">
+                            <input type="checkbox"
+                                   id="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}_{{listIndex}}_{{option.formId}}_{{rowIndex}}"
+                                   name="{{fieldCreation.fieldName}}_{{listIndex}}"
+                                   [(ngModel)]="data[fieldCreation.fieldName][fieldCreation.valueList[listIndex].value]"
+                                   [disabled]="getDisable()"
+                                   (change)="processChange($event,'change',fieldCreation.valueList[listIndex])">
+                            <label for="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}_{{listIndex}}_{{option.formId}}_{{rowIndex}}">{{fieldCreation.valueList[listIndex].display}}</label>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+        <div class="dp2Note" id="id_note_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}">
+            {{fieldCreation.note}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'DB Heavent Regular';
+    src: url('fonts/DBHeaventV3.2.ttf');
+}
+
+@font-face {
+    font-family: 'DB Heavent Light';
+    src: url('fonts/DBHeaventLiV3.2.ttf');
+}
+
+@font-face {
+    font-family: 'DB Heavent Med';
+    src: url('fonts/DBHeaventMedV3.2.ttf');
+}
+
+@font-face {
+    font-family: 'DB Heavent Black';
+    src: url('fonts/DBHeaventBlkV3.2.ttf');
+}

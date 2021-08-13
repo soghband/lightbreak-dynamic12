@@ -1,0 +1,30 @@
+#errorBubble {
+    .errorMsgPanel{
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: calc(100% - 30px);
+        margin:15px;
+        border: #ff4356 1px solid;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+        background: #ffe1d9;
+        z-index: 1060;
+        .errorRow {
+            color: #ff4356;
+            border-top: 1px dotted #ff988a;
+            padding: 0px 10px;
+            //height: 30px;
+            line-height: 30px;
+        }
+        .errorRow:first-child{
+            border-top: 0px;
+        }
+    }
+    .errorMsgSpace {
+        margin: 15px;
+        .errorRowSpace {
+            height: 30px;
+        }
+    }
+}

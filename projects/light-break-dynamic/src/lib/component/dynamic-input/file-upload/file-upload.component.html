@@ -1,0 +1,23 @@
+<div class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}" [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
+    <lb9-dynamic-form-label-panel
+            [fieldCreation]="fieldCreation"
+            [option]="option"
+            [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+
+    <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
+        <div class="posRelative {{fieldCreation.require && (!data[fieldCreation.fieldName].selectFile || !data[fieldCreation.fieldName].selectFile.length || data[fieldCreation.fieldName].selectFile.length == 0) ? 'require' : ''}}">
+            <div *ngIf="option.mode != 'view'" class="upload">
+                <input type="file"
+                       class="fullWidth" id="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}{{'_'+rowIndex}}" name="{{fieldCreation.fieldName}}"
+                       name="{{fieldCreation.fieldName}}"
+                       accept="{{acceptExt}}"
+                       [disabled]="getDisable()"
+                       (change)="handleFileSelect($event)"
+                       [multiple]="fieldCreation.multiValue"/>
+            </div>
+            <div class="dp2Note" id="id_note_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}">
+                {{fieldCreation.note}}
+            </div>
+        </div>
+    </div>
+</div>

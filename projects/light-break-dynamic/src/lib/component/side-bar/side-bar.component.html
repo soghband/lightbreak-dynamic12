@@ -1,0 +1,34 @@
+<div class="sbPanel">
+    <div class="sbAlign">
+        <div class="sbContent">
+            <div class="topBar">
+                <div class="expandIcon" (click)="toggleSideBar()"><span class="glyphicon glyphicon-menu-hamburger"></span>
+                </div>
+                <div class="detailBar">
+                    <ng-content select="[topBar]"></ng-content>
+                </div>
+            </div>
+            <div class="contentBody">
+                <div class="contentOffset" [ngStyle]="{width: componentWidth, left: leftOffset}">
+                    <div class="contentPanel">
+                        <div class="leftSide" [ngStyle]="{width: sideBarWidthCal}">
+                            <ng-scrollbar class="fixHeight">
+                                <div class="scrollHeight {{fixScrollBar ? 'fix-ng-scrollbar' : ''}}" (click)="reProcessScrollBar()">
+                                    <ng-content select="[sideBar]"></ng-content>
+                                </div>
+                            </ng-scrollbar>
+                        </div>
+                        <div class="contentAll" [ngStyle]="{width: contentWidthCal}">
+                            <div class="contentBody">
+                                <div class="blockContentSize" [ngStyle]="{width: contentWidthCal}">
+                                    <ng-content select="[contentBody]"></ng-content>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div id="{{id}}" class="mainPanel{{(margin ? ' panelMargin':'')}}">
+  <div class="panelAlign">
+    <div class="header">
+      <div>{{header}}</div>
+      <div *ngIf="showCloseBtn">
+        <span class="glyphicon glyphicon-remove-circle"></span>
+      </div>
+    </div>
+    <div class="contentPanel contentPanelGray">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

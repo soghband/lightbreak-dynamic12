@@ -1,0 +1,29 @@
+<div class="langSelect">
+    <div class="btn-style-dynamic btn-small" (click)='changeLng("th")'>Thai</div>
+    <div class="btn-style-dynamic btn-small" (click)='changeLng("en")'>English</div>
+</div>
+
+<div class="functionDetailPanel">
+    <ng-container *ngFor="let functionName of objKey(explanationText)">
+        <div id="{{functionName}}"></div>
+        <app-function-panel [header]="functionName">
+            <div class="positionRelative">
+                <explanation-panel>
+                    {{explanationText[functionName][lang]}}
+                </explanation-panel>
+                <specification-panel
+                    [using]="explanationText[functionName].using"
+                    [parameter]="explanationText[functionName].parameter">{{explanationText[functionName].example}}</specification-panel>
+            </div>
+        </app-function-panel>
+
+    </ng-container>
+</div>
+<!--<div class="functionListPanel">-->
+<!--    <ng-container *ngFor="let functionName of objKey(explanationText)">-->
+<!--        <a href="main/function-manual#{{functionName}}">-->
+<!--            {{functionName}}-->
+<!--        </a>-->
+<!--    </ng-container>-->
+<!--</div>-->
+

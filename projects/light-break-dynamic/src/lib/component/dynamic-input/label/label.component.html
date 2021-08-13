@@ -1,0 +1,13 @@
+<div class="dp2FieldPanel {{columnCalculate}} {{modeDisplay}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}" (click)="processPanelCallBack($event)">
+    <lb9-dynamic-form-label-panel
+            [fieldCreation]="fieldCreation"
+            [option]="option"
+            [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+    <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
+        <ng-container *ngFor="let dataIndex of objKeys(data[fieldCreation.fieldName])">
+            <div class="labelDetail">
+                <div id="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}{{(dataIndex > 0 ? '_'+dataIndex:'')}}">{{data[fieldCreation.fieldName][dataIndex]}}</div>
+            </div>
+        </ng-container>
+    </div>
+</div>

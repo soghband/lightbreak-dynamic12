@@ -1,0 +1,83 @@
+.uiEditPanel {
+    display: table;
+    .uiEditRow {
+        display: table-row;
+        .uiCell {
+            display:table-cell;
+            hr {
+                margin:10px 0px;
+            }
+            .containerBox {
+                background: linear-gradient(#bbbbbb, #cdcdcd,#bbbbbb, #aaaaaa);
+                border-radius: 20px;
+                margin-bottom: 5px;
+                padding: 1px 10px 0px;
+                color: #FFF;
+                text-shadow: -1px -1px 1px #737373;
+                box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+                cursor: pointer;
+                transition: all 0.5s;
+                &:hover {
+                    background: linear-gradient(#cdcdcd, #dcdcdc, #cdcdcd, #b6b6b6);
+                    text-shadow: -1px -1px 1px #999999;
+                    transform: translate(-2px, -2px);
+                    box-shadow: 4px 4px 3px rgba(0,0,0,0.2);
+                    transition: all 0.5s;
+                }
+            }
+            .componentBox {
+                background: linear-gradient(#8ac33e, #97d644,#8ac33e, #84ba3b);
+                border-radius: 20px;
+                margin-bottom: 5px;
+                padding: 1px 10px 0px;
+                color: #FFF;
+                text-shadow: -1px -1px 1px #2a6621;
+                box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+                cursor: pointer;
+                transition: all 0.5s;
+                &:hover {
+                    background: linear-gradient(#94d540, #a7ec4a, #91d92f, #96d343);
+                    text-shadow: -1px -1px 1px #3a8f2e;
+                    transform: translate(-2px, -2px);
+                    box-shadow: 4px 4px 3px rgba(0,0,0,0.2);
+                    transition: all 0.5s;
+                }
+            }
+        }
+        .componentControl {
+            min-width: 170px;
+            max-width: 170px;
+            width: 170px;
+        }
+        .propertiesControl {
+            min-width: 340px;
+            max-width: 340px;
+            width: 320px;
+        }
+    }
+}
+.importExportPanel {
+    width: 100%;
+}
+.importExportCell {
+    display: inline-block;
+    max-width: 50%;
+    min-width: 50%;
+    vertical-align: top;
+}
+.importTextArea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 180px;
+    tab-size: 20px;
+}
+.exportTextArea {
+    max-width: calc(100% - 6px);
+    min-width: calc(100% - 6px);
+    min-height: 180px;
+    tab-size: 20px;
+}
+.btnPanel {
+    margin-top: 10px;
+    text-align: center;
+}

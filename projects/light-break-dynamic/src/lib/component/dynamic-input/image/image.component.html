@@ -1,0 +1,48 @@
+<div class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}"
+     [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
+    <lb9-dynamic-form-label-panel
+            [fieldCreation]="fieldCreation"
+            [option]="option"
+            [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+    <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
+        <ng-container
+                *ngIf="base64textString != null && base64textString.length == 0 && getType(data[fieldCreation.fieldName].currentFile) != 'undefined'">
+            <div class="imageItem" *ngFor="let fileIndex of objKeys(data[fieldCreation.fieldName].currentFile)">
+                <div class="image"
+                     [ngStyle]="{'background-image':getNasImageUrl(data[fieldCreation.fieldName].currentFile[fileIndex])}"  (click)="clickCurrentImage(fileIndex)"></div>
+                <div *ngIf="fieldCreation.showDelete" class="deleteImage" (click)="deleteCurrentImage(fileIndex)">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="base64textString != null && base64textString.length > 0">
+            <div class="imageItem" *ngFor="let indexB64 of objKeys(base64textString)">
+                <div class="image" [ngStyle]="{'background-image':base64textString[indexB64]}" (click)="clickImage(indexB64)">
+
+                </div>
+                <div *ngIf="fieldCreation.showDelete" class="deleteImage" (click)="deleteImage(indexB64)">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </div>
+            </div>
+        </ng-container>
+        <div class="posRelative {{fieldCreation.require && checkFileRequire() ? 'require' : ''}}">
+            <div *ngIf="option.mode != 'view'" class="upload">
+                <input type="file" class="fullWidth"
+                       id="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}{{'_'+rowIndex}}"
+                       name="{{fieldCreation.fieldName}}"
+                       accept="{{acceptExt}}"
+                       #imageInput
+                       [disabled]="getDisable()"
+                       (change)="handleFileSelect($event)"
+                       [multiple]="fieldCreation.multiValue"/>
+            </div>
+            <div class="dp2Note"
+                 id="id_note_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}">
+                {{fieldCreation.note}}
+            </div>
+            <div class="dp2Error">
+                {{errorMsg}}
+            </div>
+        </div>
+    </div>
+</div>

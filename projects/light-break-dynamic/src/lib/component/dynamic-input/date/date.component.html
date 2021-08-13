@@ -1,0 +1,48 @@
+<div class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}" [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
+    <lb9-dynamic-form-label-panel
+            [fieldCreation]="fieldCreation"
+            [option]="option"
+            [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+    <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
+        <ng-container *ngFor="let dataIndex of objKeys(data[fieldCreation.fieldName])">
+            <div class="posRelative {{fieldCreation.require && data[fieldCreation.fieldName][dataIndex].value == '' ? 'require' : ''}}">
+                <input type="textbox" #dateInput
+                       class="dateWidth"
+                       id="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}{{(dataIndex > 0 ? '_'+dataIndex:'')}}"
+                       name="{{fieldCreation.fieldName}}"
+                       [(ngModel)]="data[fieldCreation.fieldName][dataIndex].display"
+                       [readonly]="getDateDisable()"
+                       (focus)="processCallBack($event,'focus',dataIndex)"
+                       (blur)="processBlur($event,'blur',dataIndex)"
+                       (keyup)="processKeyUp($event,'keyup',dataIndex)"
+                       (keypress)="processCallBackKeyPress($event,'keypress',dataIndex)"
+                       (keydown)="processKeyDown($event,'keydown',dataIndex)"
+                       (click)="processCallBack($event,'click',dataIndex)"
+                       (change)="processCallBack($event,'change',dataIndex)"
+                       maxlength="{{fieldCreation.maxLength}}"
+                       placeholder="{{fieldCreation.placeholder}}"/>
+                <div class="dateToggle{{getDisable() ? ' disable' : ' enable'}}"
+                     (click)="!getDisable() ? openCalendar(data[fieldCreation.fieldName][dataIndex].value, dataIndex) : null"><span class="glyphicon glyphicon-calendar"></span></div>
+                <lb9-date-picker #datePicker
+                                 (setDate)="setDate($event,dataIndex)"
+                                 (inputFocus)="setFocus($event,dataIndex)"
+                                 [monthListLong]="fieldCreation.monthListLong"
+                                 [monthListShort]="fieldCreation.monthListShort"
+                                 [weekDay]="fieldCreation.weekDay"
+                                 [showToday]="fieldCreation.showToday"
+                                 [todayText]="fieldCreation.todayText"
+                                 [closeOnDateSelect]="fieldCreation.closeOnDateSelect"
+                                 [yearOffset]="fieldCreation.yearOffset"></lb9-date-picker>
+                <div *ngIf="fieldCreation.multiValue && !(getDisable())"
+                     class="deleteBtnWithDate"
+                     (click)="deleteMultiVal(dataIndex)"><span class="glyphicon glyphicon-minus"></span></div>
+            </div>
+        </ng-container>
+        <div class="dp2Note" id="id_note_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}">
+            {{fieldCreation.note}}
+        </div>
+        <div *ngIf="fieldCreation.multiValue && !(getDisable())" class="addBtn"
+             (click)="addMultiVal()"><span
+                class="glyphicon glyphicon-plus"></span></div>
+    </div>
+</div>

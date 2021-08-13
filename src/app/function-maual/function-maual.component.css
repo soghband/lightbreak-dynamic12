@@ -1,0 +1,21 @@
+.positionRelative {
+  position: relative; }
+
+.langSelect {
+  text-align: right; }
+
+.functionListPanel {
+  display: inline-block;
+  width: 180px;
+  vertical-align: top; }
+  .functionListPanel a {
+    font-size: 20px !important;
+    display: block; }
+
+.functionDetailPanel {
+  display: inline-block;
+  width: calc(100% - 200px);
+  vertical-align: top; }
+  .functionDetailPanel a {
+    text-underline: none;
+    border-bottom: 0px; }

@@ -1,0 +1,68 @@
+<div class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}" [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
+    <lb9-dynamic-form-label-panel
+            [fieldCreation]="fieldCreation"
+            [option]="option"
+            [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+    <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
+        <div class="dp2Table fullWidth dp2TableSpace">
+            <div class="dp2Row posRelative">
+                <div class="dp2Cell">
+                    <div class="displayPanel">
+                        Display
+                    </div>
+                </div>
+                <div class="dp2Cell">
+                    <div class="valuePanel">
+                        Value
+                    </div>
+                </div>
+            </div>
+            <ng-container *ngFor="let dataIndex of objKeys(data[fieldCreation.fieldName])">
+                <div class="dp2Row">
+                    <div class="dp2Cell">
+                        <div class="posRelative {{fieldCreation.require && data[fieldCreation.fieldName][dataIndex] == '' ? 'require' : ''}} displayPanel">
+                            <input type="textbox" class="fullWidth"
+                                   id="id_display_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}{{(dataIndex > 0 ? '_'+dataIndex:'')}}"
+                                   name="{{fieldCreation.fieldName}}"
+                                   [(ngModel)]="data[fieldCreation.fieldName][dataIndex].display"
+                                   [readonly]="getDisable()"
+                                   (focus)="processCallBack($event,'focus',dataIndex)"
+                                   (blur)="processCallBack($event,'blur',dataIndex)"
+                                   (keyup)="processKeyUp($event,'keyup',dataIndex)"
+                                   (keypress)="processCallBackKeyPress($event,'keypress',dataIndex)"
+                                   (keydown)="processKeyDown($event,'keydown',dataIndex)"
+                                   (click)="processCallBack($event,'click',dataIndex)"
+                                   (change)="processCallBack($event,'change',dataIndex)"
+                                   maxlength="{{fieldCreation.maxLength}}"/>
+                        </div>
+                    </div>
+                    <div class="dp2Cell">
+                        <div class="posRelative {{fieldCreation.require && data[fieldCreation.fieldName][dataIndex] == '' ? 'require' : ''}} valuePanel">
+                            <input type="textbox" class="fullWidth"
+                                   id="id_value_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}{{(dataIndex > 0 ? '_'+dataIndex:'')}}"
+                                   name="{{fieldCreation.fieldName}}"
+                                   [(ngModel)]="data[fieldCreation.fieldName][dataIndex].value"
+                                   [readonly]="getDisable()"
+                                   (focus)="processCallBack($event,'focus',dataIndex)"
+                                   (blur)="processCallBack($event,'blur',dataIndex)"
+                                   (keyup)="processKeyUp($event,'keyup',dataIndex)"
+                                   (keypress)="processCallBackKeyPress($event,'keypress',dataIndex)"
+                                   (keydown)="processKeyDown($event,'keydown',dataIndex)"
+                                   (click)="processCallBack($event,'click',dataIndex)"
+                                   (change)="processCallBack($event,'change',dataIndex)"
+                                   maxlength="{{fieldCreation.maxLength}}"/>
+                            <div *ngIf="option.mode != 'view'" class="deleteBtn"
+                                 (click)="deleteMultiVal(dataIndex)"><span class="glyphicon glyphicon-minus"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            <div class="dp2Note" id="id_note_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}">
+                {{fieldCreation.note}}
+            </div>
+            <div *ngIf="!(getDisable())" class="addBtn" (click)="addMultiVal()"><span
+                    class="glyphicon glyphicon-plus"></span></div>
+        </div>
+    </div>
+</div>

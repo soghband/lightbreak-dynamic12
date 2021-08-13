@@ -1,0 +1,52 @@
+<div class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}" [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
+    <lb9-dynamic-form-label-panel
+        [fieldCreation]="fieldCreation"
+        [option]="option"
+        [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+    <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
+        <ng-container *ngFor="let dataIndex of objKeys(data[fieldCreation.fieldName])">
+            <div class="posRelative {{fieldCreation.require && (!data[fieldCreation.fieldName][dataIndex].value || data[fieldCreation.fieldName][dataIndex].value == '') ? 'require' : ''}}">
+                <input type="textbox" class="{{fieldCreation.showButton ? 'autoCompleteWidth':'fullWidth'}}" id="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}{{(dataIndex > 0 ? '_'+dataIndex:'')}}"
+                       name="{{fieldCreation.fieldName}}" [(ngModel)]="data[fieldCreation.fieldName][dataIndex].display"
+                       [autocomplete]="'off'"
+                       [readonly]="getDisable()"
+                       (focus)="processFocus($event,'focus',dataIndex)"
+                       (blur)="processBlur($event,'blur',dataIndex)"
+                       (keyup)="processKeyUp($event,'keyup',dataIndex)"
+                       (keypress)="processCallBackKeyPress($event,'keypress',dataIndex)"
+                       (keydown)="processKeyDown($event,'keydown',dataIndex)"
+                       (click)="processClick($event,'click',dataIndex)"
+                       (change)="processCallBack($event,'change',dataIndex)"
+                       maxlength="{{fieldCreation.maxLength}}"
+                       placeholder="{{fieldCreation.placeholder}}"/>
+                <div *ngIf="fieldCreation.multiValue && !(getDisable())" class="{{fieldCreation.showButton ? 'deleteBtnWithAutoComplete': 'deleteBtn'}}" (click)="deleteMultiVal(dataIndex)"><span
+                        class="glyphicon glyphicon-minus"></span></div>
+                <div *ngIf="autoCompleteFilterList[dataIndex].length > 0"
+                     class="autoCompleteList {{displayAutoComplete[dataIndex]}}"
+                     (mouseenter)="setOverList(dataIndex)"
+                     (mouseleave)="setOutList(dataIndex)">
+                    <ng-scrollbar #a_ngScrollbar class="autoCompleteScrollBox">
+                        <div class="autoCompleteListBox {{fixScrollBar ? 'fix-ng-scrollbar' : ''}}">
+                            <div *ngFor="let filterIndex of objKeys(autoCompleteFilterList[dataIndex])" class="autoCompleteData  {{(selectIndex == filterIndex ? 'selectedIndex' : '')}}"
+                                 (mouseenter)="mouseOverChangeIndex(filterIndex)"
+                                 (click)="assignData($event,dataIndex,autoCompleteFilterList[dataIndex][filterIndex])">
+                                {{autoCompleteFilterList[dataIndex][filterIndex].display}}
+                            </div>
+                        </div>
+                    </ng-scrollbar>
+                </div>
+                <div *ngIf="fieldCreation.showButton" class="autoCompleteButtonPanel{{getDisable() ? ' disable': ' enable'}}"
+                    (click)="!getDisable() ? processFocus($event, 'clickBtn', dataIndex) : null"
+                    (mouseenter)="setBtnHover(true)"
+                    (mouseleave)="setBtnHover(false)">
+                    <span class="glyphicon glyphicon-search"></span>
+                </div>
+            </div>
+        </ng-container>
+        <div class="dp2Note" id="id_note_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}">
+            {{fieldCreation.note}}
+        </div>
+        <div *ngIf="fieldCreation.multiValue && !(getDisable())" class="addBtn" (click)="addMultiVal()"><span
+                class="glyphicon glyphicon-plus"></span></div>
+    </div>
+</div>

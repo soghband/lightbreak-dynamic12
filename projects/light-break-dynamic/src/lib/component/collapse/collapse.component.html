@@ -1,0 +1,13 @@
+<div class="lbCollapse">
+    <div class="collapseHeaderPanel{{active ? ' active':''}}" (click)="toggleShowDiv()">
+        <div class="collapseHeader" [innerHTML]="header">
+
+        </div>
+        <div class="collapseArrow"></div>
+    </div>
+    <div class="collapseContent" [@slideInOut]="animationState">
+        <ng-content>
+
+        </ng-content>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+<div class="formPanel defaultDynamicForm {{formCreation.form.option.customClass ? formCreation.form.option.customClass : ''}}">
+    <form *ngIf="showForm" action="" method="post">
+        <ng-container *ngIf="!formCreation.form.option.displayMode || formCreation.form.option.displayMode != 'table'">
+            <ng-container *ngFor="let rowIndex of objKey(formCreation.data)">
+                <ng-container *ngIf="formCreation.form.option.frame == true">
+                    <lb9-dynamic-form-frame [header]="frameHeader"
+                                            [rowIndex]="rowIndex"
+                                            [showDeleteRow]="formCreation.form.option.deleteRow"
+                                            (callback)="callBackFrame($event)">
+                        <lb9-dynamic-form-row [_reRenderFieldList]="_reRenderFieldList"
+                                              [containerList]="formCreation.form.containerList"
+                                              [option]="formCreation.form.option"
+                                              [data]="formCreation.data"
+                                              [rowIndex]="rowIndex"
+                                              (callBack)="processCallBack($event)"
+                                              (panelCallBack)="processPanelCallBack($event)">
+
+                        </lb9-dynamic-form-row>
+
+                    </lb9-dynamic-form-frame>
+                </ng-container>
+                <ng-container *ngIf="formCreation.form.option.frame == false || !formCreation.form.option.frame">
+                    <lb9-dynamic-form-row [_reRenderFieldList]="_reRenderFieldList"
+                                          [containerList]="formCreation.form.containerList"
+                                          [option]="formCreation.form.option"
+                                          [data]="formCreation.data"
+                                          [rowIndex]="rowIndex"
+                                          (callBack)="processCallBack($event)"
+                                          (panelCallBack)="processPanelCallBack($event)">
+                    </lb9-dynamic-form-row>
+                </ng-container>
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="formCreation.form.option.displayMode == 'table'">
+            <div class="table-form-default-dynamic">
+                <div class="header"></div>
+                <div class="scroll">
+                    <table>
+                        <tr>
+                            <th *ngFor="let fieldLabel of fieldLabelList" [innerHTML]="fieldLabel">
+                            </th>
+                            <th *ngIf="formCreation.form.option.deleteRow">
+
+                            </th>
+                        </tr>
+                        <ng-container *ngFor="let rowIndex of objKey(formCreation.data)">
+                            <ng-container *ngIf="formCreation.form.containerList">
+                                <ng-container *ngFor="let containerIndex of objKey(refinedContainerTableMode)">
+                                    <tr lb9-dynamic-container-table
+                                        [containerCreation]="refinedContainerTableMode[containerIndex]"
+                                        [data]="formCreation.data"
+                                        [actionDataIndex]="rowIndex"
+                                        [containerIndex]="containerIndex"
+                                        [option]="formCreation.form.option"
+                                        [reRenderField]="_reRenderFieldList"
+                                        (callBack)="processCallBack($event)"
+                                        (panelCallBack)="processPanelCallBack($event)">
+                                    </tr>
+                                </ng-container>
+                            </ng-container>
+                        </ng-container>
+                        <tr *ngIf="formCreation.form.option.addRow && formCreation.form.option.displayMode == 'table'">
+                            <td [colSpan]="fieldLabelList.length+1">
+                                <div class="dp2AddNewBtnTbl" id="add_row_data_table_footer" (click)="addRow()">
+                                    <span class="glyphicon glyphicon-plus-sign"></span>
+                                    <div *ngIf="formCreation.form.option.addRowText">{{formCreation.form.option.addRowText}}</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </ng-container>
+        <div *ngIf="formCreation.form.option.addRow && formCreation.form.option.displayMode != 'table'" class="dp2AddNew">
+            <div class="dp2AddNewBtn" id="add_row_data" (click)="addRow()">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+                <div *ngIf="formCreation.form.option.addRowText">{{formCreation.form.option.addRowText}}</div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,34 @@
+<div class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}" [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
+    <lb9-dynamic-form-label-panel
+            [fieldCreation]="fieldCreation"
+            [option]="option"
+            [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+    <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
+        <ng-container *ngFor="let dataIndex of objKeys(data[fieldCreation.fieldName])">
+            <div class="posRelative {{fieldCreation.require && data[fieldCreation.fieldName][dataIndex] == '' ? 'require' : ''}}">
+                <input type="{{getType()}}" class="fullWidth" id="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}{{(dataIndex > 0 ? '_'+dataIndex:'')}}"
+                       name="{{fieldCreation.fieldName}}"
+                       [(ngModel)]="data[fieldCreation.fieldName][dataIndex]"
+                       [readonly]="getDisable()"
+                       (focus)="processCallBack($event,'focus',dataIndex)"
+                       (blur)="processBlur($event,'blur',dataIndex)"
+                       (keyup)="processKeyUp($event,'keyup',dataIndex)"
+                       (keypress)="processCallBackKeyPress($event,'keypress',dataIndex)"
+                       (keydown)="processKeyDown($event,'keydown',dataIndex)"
+                       (click)="processCallBack($event,'click',dataIndex)"
+                       (change)="processCallBack($event,'change',dataIndex)"
+                       maxlength="{{fieldCreation.maxLength}}"
+                       max="{{fieldCreation.max}}"
+                       min="{{fieldCreation.min}}"
+                       placeholder="{{fieldCreation.placeholder}}"/>
+                <div *ngIf="fieldCreation.multiValue && !(getDisable())" class="deleteBtn"
+                     (click)="deleteMultiVal(dataIndex)"><span class="glyphicon glyphicon-minus"></span></div>
+            </div>
+        </ng-container>
+        <div class="dp2Note">
+            {{fieldCreation.note}}
+        </div>
+        <div *ngIf="fieldCreation.multiValue && !(getDisable())" class="addBtn" (click)="addMultiVal()"><span
+                class="glyphicon glyphicon-plus"></span></div>
+    </div>
+</div>

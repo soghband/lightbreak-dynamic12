@@ -1,0 +1,1432 @@
+
+.defaultDynamicForm {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  letter-spacing: 1px;
+
+  .fieldContainer {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .dp2FieldPanel {
+    margin: 7px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: calc(100% - 14px);
+
+    .dp2Label {
+      //font-size: 20px;
+      font-weight: bold;
+      //line-height: 32px;
+      padding-right: 3px;
+      line-height: 30px;
+
+      .requireLabel {
+        color: #F00;
+        margin-left: 2px;
+      }
+    }
+
+    .customClass {
+      width: 100%;
+    }
+
+    .singleLine {
+      display: inline-block;
+      @media screen and (max-width: 767px) {
+        display: block;
+      }
+    }
+
+    .vAlignTop {
+      vertical-align: top;
+    }
+
+    .alignRight {
+      text-align: right;
+      @media screen and (max-width: 767px) {
+        text-align: left;
+      }
+    }
+
+    .dp2MiddleTool {
+      text-align: center;
+
+      .btn-margin-bottom {
+        margin-bottom: 10px;
+      }
+    }
+
+    .dp2InputBox {
+      width: 100%;
+      min-height: 30px;
+      @media screen and (max-width: 767px) {
+        width: 100% !important;
+      }
+
+      input {
+        line-height: 33px;
+      }
+
+      input, textarea {
+        border: 1px solid #a9a9a9;
+        border-radius: 5px;
+        padding: 0px 5px;
+        max-width: 100%;
+      }
+
+      input:-moz-read-only, textarea:-moz-read-only {
+        background-color: #F2F2F2;
+      }
+
+      input:read-only, textarea:read-only {
+        background-color: #F2F2F2;
+      }
+
+      select {
+        background-color: #FFF;
+        line-height: 33px;
+      }
+
+      select:disabled {
+        background-color: #F2F2F2;
+      }
+
+      label {
+        font-weight: normal;
+      }
+
+      textarea {
+        width: 100%;
+      }
+
+      .fullWidth {
+        width: 100%;
+      }
+
+      .dateWidth {
+        width: calc(100% - 36px);
+      }
+
+      .dateToggle {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: #8BC43F;
+        display: inline-block;
+        padding: 1px 5px 4px 7px;
+        border-radius: 5px;
+        line-height: 30px;
+        span {
+          margin: 1px 2px 0px;
+          top: 4px;
+          color: #FFF;
+        }
+      }
+
+      .dateToggleDisable {
+        background-color: #7E836F;
+      }
+
+      .require {
+        border-color: #f00;
+        box-shadow: 2px 2px 2px rgba(255, 0, 0, 0.2), -2px -2px 2px rgba(255, 0, 0, 0.2), 2px -2px 2px rgba(255, 0, 0, 0.2), -2px 2px 2px rgba(255, 0, 0, 0.2);
+      }
+
+      .labelDetail {
+        line-height: 30px;
+      }
+
+      .sourceBox {
+        padding: 10px;
+        width: 50%;
+        border: 1px solid #a9a9a9;
+        border-radius: 5px;
+
+        .source, .destination {
+          max-height: 20vh;
+          overflow-y: auto;
+          overflow-x: hidden;
+          transition: all 0.5s;
+        }
+
+        .source_select {
+          cursor: pointer;
+        }
+
+        .source_select:hover {
+          background: #c9c9c9;
+        }
+      }
+
+      .readonly {
+        background-color: #F2F2F2;
+      }
+
+      .iconBox {
+        padding: 10px;
+        vertical-align: middle;
+        width: 39px;
+        text-align: center;
+        color: #a9a9a9a9
+      }
+
+      .icon {
+        color: #000;
+        display: inline-block;
+        cursor: hand;
+        cursor: pointer;
+        margin: 1px;
+        line-height: 40px;
+      }
+
+      .icon-disable {
+        color: #7e836f
+      }
+
+      .posRelative {
+        position: relative;
+        margin-top: 5px;
+
+        .checkBoxTableDisplay {
+          min-height: 30px;
+          max-height: 100px;
+          overflow: hidden;
+        }
+
+        .checkBoxIndent {
+          margin-left: 10px;
+          line-height: 20px;
+          //font-size: 18px;
+
+          input {
+            vertical-align: middle;
+            margin: 0px;
+          }
+
+          label {
+            margin: 0px 0px 0px 4px;
+          }
+        }
+
+        .singlePerLine {
+          display: block;
+        }
+
+        .multiplePerLine {
+          display: inline-block;
+        }
+
+        .deleteBtn {
+          position: absolute;
+          top: 7px;
+          right: 6px;
+          opacity: 0.2;
+
+          span {
+            color: #F2D600;
+            cursor: pointer;
+          }
+        }
+
+        .deleteBtnWithDate {
+          position: absolute;
+          top: 7px;
+          right: 40px;
+          opacity: 0.2;
+
+          span {
+            color: #F2D600;
+            cursor: pointer;
+          }
+        }
+
+        .autoCompleteHide {
+          display: none;
+        }
+
+        .autoCompleteShow {
+          display: block;
+        }
+        .autoCompleteScrollBox {
+          max-height: 20vh;
+          overflow: hidden;
+        }
+        .autoCompleteList {
+          position: absolute;
+          z-index: 3;
+          background: #FFF;
+          width: 100%;
+          border: 1px solid #246627;
+          border-radius: 5px;
+          overflow: hidden;
+          top: 34px;
+
+          .autoCompleteListBox {
+            padding: 5px;
+            max-height: 60vh;
+          }
+
+          .autoCompleteData {
+            padding: 3px 6px;
+          }
+
+          .selectedIndex {
+            background: #c9c9c9;
+          }
+        }
+
+        .checkboxHide {
+          display: none;
+        }
+
+        .checkboxShow {
+          display: block;
+        }
+
+        .checkboxList {
+          position: absolute;
+          z-index: 3;
+          background: #FFF;
+          width: 100%;
+          border: 1px solid #246627;
+          border-radius: 5px;
+          overflow: hidden;
+          top: 34px;
+
+          .checkboxListBox {
+            padding: 10px;
+            max-height: 60vh;
+          }
+        }
+
+        .select-style-custom {
+          max-width: 100%;
+        }
+      }
+
+      .arrowToggle {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        cursor: hand;
+        cursor: pointer;
+
+        .arrowUp {
+          margin: 5px;
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border: 5px solid #8c7f79;
+          border-left: 5px solid transparent;
+          border-top: 5px solid transparent;
+          transform: rotate(45deg);
+          position: relative;
+          top: 2px;
+        }
+
+        .arrowDown {
+          margin: 5px;
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border: 5px solid #8c7f79;
+          border-left: 5px solid transparent;
+          border-top: 5px solid transparent;
+          transform: rotate(45deg);
+          position: relative;
+          top: 2px;
+        }
+      }
+
+      .displayPanel {
+
+      }
+
+      .valuePanel {
+
+      }
+
+      .posRelative:first-child {
+        margin-top: 0px;
+      }
+
+      .posRelative:hover {
+        .deleteBtn {
+          opacity: 1;
+        }
+
+      }
+
+      .addBtn {
+        margin: 5px 0px 0px 5px;
+
+        span {
+          color: #71c825;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .dp2TCheckBox {
+      label {
+        font-weight: initial;
+      }
+    }
+
+    .image {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      display: inline-block;
+    }
+
+    .upload {
+      input {
+        //font-size: 14px;
+      }
+    }
+
+    .select-style-custom {
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAQAAAD41aSMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAiVJREFUeNrt20tOw1AUREFn0YwxO2cAUhTxcxLbtxvVkdhAl4DEfu/ysmiyCwAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABAADABgAACAAAAQAgAAAEAIAAABAAAEe0Lq/Be7wt6///DcglOH3+qT9BmQQD88/9D8gjGJl/8p9wFsHQ/LOfgnIIxuaf/hiaQTA4//z3gHmC0fkTvojNEgzPn/FNeI5gfP6URxEzBAHz5zwLOp8gYv6kh3HnEoTMn/U09DyCmPnTHkefQxA0f977gOMJouZPfCFzLEHY/JlvxI4jiJs/9ZXkMQSB8+e+E96fIHL+5Jfy+xKEzp99KmI/gtj504+l7EMQPH/+uaDnCaLnbziY9RxB+PwdJ+MeJ4ifv+Vo4mMEBfP3nA29n6Bi/qbDufcRlMzfdTp6O0HN/G3H07cRFM3fdz/gb4Kq+RsvaPxOUDZ/5w2Znwnq5m+9ovQ9QeH8vXfEvhJUzt98Se+WoHT+7luSV4La+duvqX4QFM/ff094/fwBIAAABACAAAAQAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAACwAQAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABAKDNvQMtH6eBB4hqHwAAAABJRU5ErkJggg==') no-repeat 100%/30px auto;
+      appearance: none;
+      -webkit-appearance: none;
+      padding: 0px 35px 0px 5px;
+      border-radius: 5px;
+      border: 1px solid #a9a9a9;
+    }
+
+    .dp2Note {
+      color: #999;
+    }
+
+    .dp2Error {
+      color: #f91212;
+    }
+  }
+
+  .dp2Col1 {
+    width: calc(100% - 14px);
+    @media screen and (max-width: 767px) {
+      width: calc(100% - 10px);
+      max-width: 425px;
+    }
+  }
+
+  .dp2Col2 {
+    width: calc(50% - 18px);
+    @media screen and (max-width: 767px) {
+      width: calc(100% - 18px);
+      max-width: 425px;
+    }
+  }
+
+  .dp2Col3 {
+    width: calc(33% - 18px);
+    @media screen and (max-width: 767px) {
+      width: calc(100% - 18px);
+      max-width: 425px;
+    }
+  }
+
+  .dp2Col4 {
+    width: calc(25% - 18px);
+    @media screen and (max-width: 767px) {
+      width: calc(100% - 18px);
+      max-width: 425px;
+    }
+  }
+
+  .dp2hide {
+    display: none;
+  }
+
+  .dp2Table {
+    display: table;
+
+    .dp2Row {
+      display: table-row;
+
+      .dp2Cell {
+        display: table-cell;
+      }
+    }
+  }
+
+  .dp2TableSpace {
+    border-spacing: 5px;
+    border-collapse: separate;
+    border: 1px solid #a9a9a9;
+    border-radius: 5px;
+    background: #fffdef
+  }
+
+  .dp2AddNew {
+    text-align: center;
+
+    .dp2AddNewBtn {
+      display: inline-block;
+      //font-size: 20px;
+      margin: 5px;
+      padding: 5px 30px;
+      background: #71c825;
+      color: #FFF;
+      border-radius: 30px;
+      cursor: hand;
+      cursor: pointer;
+
+      span {
+        padding-top: 5px;
+      }
+
+      div {
+        display: inline-block;
+        margin-left: 10px;
+        margin-top: 2px;
+        vertical-align: top;
+      }
+    }
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+  }
+}
+
+.panel-heading-dynamic {
+  label {
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+}
+
+#dynamicTable, .table-default-dynamic {
+  width: 100%;
+  margin: 0px auto;
+
+  .header {
+    width: 100%;
+    background: #8bc43f;
+    color: #ffffff;
+    //font-size: 22px;
+    padding-left: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .scroll {
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+
+    table {
+      border: #ddd 1px solid;
+      width: 100%;
+
+      th {
+        //font-size: 19px;
+        letter-spacing: 1px;
+        background: #D9D9D9;
+        padding: 0px 5px;
+        color: #8c7f79;
+        border-bottom: #ddd 1px solid;
+        white-space: nowrap;
+
+        &.actionClick {
+          cursor: pointer;
+        }
+      }
+
+      td {
+        padding: 0px 5px;
+        border-bottom: #ddd 1px solid;
+        color: #8c7f79;
+        white-space: nowrap;
+        vertical-align: top;
+      }
+
+      tr.gray {
+        background: #FFF;
+      }
+
+      tr.yellow {
+        background: #F2F2F2;
+      }
+
+      tr:nth-child(even) {
+        background: #FFF;
+      }
+
+      tr:nth-child(odd) {
+        background: #F2F2F2;
+      }
+    }
+  }
+
+  .btn-action {
+    display: inline-block;
+    color: #ff5451;
+    //font-size: 16px;
+    margin-top: 6px;
+
+    &.edit {
+      color: #ffbf21;
+      margin-right: 10px;
+    }
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .link-action {
+    cursor: pointer;
+    color: #ff5451;
+    //font-size: 20px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .arrowUp {
+    margin: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8c7f79;
+    border-right: 0px;
+    border-bottom: 0px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+  }
+
+  .arrowDown {
+    margin: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8c7f79;
+    border-left: 0px;
+    border-top: 0px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 2px;
+  }
+
+  .dataAction {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#pagingPanel {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  height: 31px;
+  margin-top: 15px;
+
+  .totalRecord {
+    position: absolute;
+    left: 0px;
+  }
+
+  .pageControl {
+    position: absolute;
+    right: 0px;
+  }
+
+  div {
+    display: inline-block;
+    //font-size: 22px;
+  }
+
+  input {
+    width: auto;
+  }
+
+  .currentPage {
+    display: inline-block;
+    //font-size: 22px;
+    text-align: center;
+    height: 27px;
+    //width: auto !important;
+    padding: 0 10px;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+
+  .first {
+    padding: 0px 2px;
+    cursor: pointer;
+    //font-size: 20px;
+    color: #8AC33E;
+    position: relative;
+    top: 3px;
+  }
+
+  .last {
+    padding: 0px 2px;
+    cursor: pointer;
+    //font-size: 20px;
+    color: #8AC33E;
+    position: relative;
+    top: 3px;
+  }
+
+  .arrowLeft {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8AC33E;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-radius: 3px;
+    transform: rotate(-45deg);
+  }
+
+  .innerLeftArrow {
+    position: relative;
+    left: -6px;
+  }
+
+  .first:hover {
+    .arrowLeft {
+      border-color: #b4ff52;
+    }
+  }
+
+  .previous {
+    padding: 0px 2px;
+    cursor: pointer;
+    //font-size: 20px;
+    color: #8AC33E;
+    position: relative;
+    top: 3px;
+  }
+
+  .previous:hover {
+    .arrowLeft {
+      border-color: #b4ff52;
+    }
+  }
+
+  .arrowRight {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8AC33E;
+    border-top: 0px;
+    border-left: 0px;
+    border-radius: 3px;
+    transform: rotate(-45deg);
+  }
+
+  .innerRightArrow {
+    position: relative;
+    right: -7px;
+  }
+
+  .last:hover {
+    .arrowRight {
+      border-color: #b4ff52;
+    }
+  }
+
+  .next {
+    padding: 0px 2px;
+    cursor: pointer;
+    //font-size: 20px;
+    color: #8AC33E;
+    position: relative;
+    top: 3px;
+  }
+
+  .next:hover {
+    .arrowRight {
+      border-color: #b4ff52;
+    }
+  }
+
+}
+
+.p2DynamicTabPanel {
+  .dynamicTab {
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+
+    .tabComponent {
+      position: relative;
+      display: inline-block;
+      background: #DDD;
+      color: #666;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      padding: 0px 10px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      height: 35px;
+      line-height: 29px;
+      border-top: solid 3px;
+      cursor: pointer;
+      vertical-align: top;
+      margin-left: 2px;
+    }
+
+    .tabComponent:first-child {
+      margin-left: 0px;
+    }
+
+    .active {
+      background: #8ac33e;
+      color: #FFF;
+      border-top-color: #76a939;
+    }
+
+    .inactive {
+      border-top-color: #b5b5b5;
+    }
+  }
+
+  .p2DShowTab {
+    display: block;
+  }
+
+  .p2DHideTab {
+    display: none;
+  }
+
+  .tabContentPanel {
+    border: 1px solid #DDD;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+
+    .-vertical {
+
+    }
+
+    .fixMaxHeight {
+      position: relative;
+      max-height: 40vh;
+      overflow: hidden;
+    }
+  }
+}
+
+#dynamicPopup {
+  .modal-header {
+    .modal-title {
+      //font-size: 32px;
+    }
+  }
+
+  .modal-body {
+    .glyphicon {
+      //font-size: 40px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3)
+    }
+
+    .data-msg {
+      //font-size: 22px;
+      color: #999;
+    }
+  }
+
+  .modal-footer {
+  }
+
+  .cError {
+    color: #f91212;
+  }
+
+  .cInfo {
+    color: #5351df;
+  }
+
+  .cWarning {
+    color: #ffe807;
+  }
+
+  .cSuccess {
+    color: #21a807;
+  }
+
+  .cConfirm {
+    color: #ff7b00;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.dynamic-popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all linear 300ms;
+
+  &.showPopup {
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+
+    .dynamic-popup-inside {
+      margin-top: 50px;
+    }
+  }
+
+  .foreground-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .dynamic-popup-inside {
+    width: 600px;
+    margin: 0px auto;
+    transition: all linear 300ms;
+  }
+
+  .dynamic-popup-container {
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    z-index: 10;
+  }
+
+  .dynamic-popup-header, .dynamic-popup-body, .dynamic-popup-footer {
+    padding: 1rem;
+  }
+
+  .dynamic-popup-header {
+    border-bottom: 1px solid #e9ecef;
+    //font-size: 22px;
+    color: #3a3a3a;
+    font-weight: 600;
+  }
+
+  .dynamic-popup-body {
+    max-height: 50vh;
+    overflow: auto;
+
+    .glyphicon {
+      //font-size: 40px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3)
+    }
+
+    .data-msg {
+      //font-size: 22px;
+      color: #999;
+    }
+  }
+
+  .dynamic-popup-footer {
+    border-top: 1px solid #e9ecef;
+  }
+
+  .cError {
+    color: #f91212;
+  }
+
+  .cInfo {
+    color: #5351df;
+  }
+
+  .cWarning {
+    color: #ffe807;
+  }
+
+  .cSuccess {
+    color: #21a807;
+  }
+
+  .cConfirm {
+    color: #ff7b00;
+  }
+}
+
+.datePickerPanel {
+  position: absolute;
+  z-index: 1;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  .datePickerAlign {
+    background: #FFF;
+    position: relative;
+    min-width: 320px;
+    max-width: 320px;
+    padding: 20px;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 100%;
+
+    .monthYearPanel {
+      position: relative;
+
+      .monthYearDisplay {
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+        line-height: 30px;
+
+        .monthYearAction {
+          cursor: pointer;
+          cursor: hand;
+          display: inline-block;
+
+          span {
+            //font-size: 14px;
+            top: 3px;
+            position: relative;
+          }
+        }
+
+        .prev {
+          position: absolute;
+          display: inline-block;
+          left: 5px;
+          top: 5px;
+          cursor: pointer;
+          cursor: hand;
+        }
+
+        .next {
+          position: absolute;
+          display: inline-block;
+          right: 5px;
+          top: 5px;
+          float: right;
+          cursor: pointer;
+          cursor: hand;
+        }
+      }
+    }
+
+    .dateTablePanel {
+      height: 265px;
+      width: 280px;
+
+      .dateTable {
+        tr {
+          th {
+            text-align: center;
+            padding: 0px;
+          }
+
+          td {
+            padding: 0px;
+            text-align: center;
+
+
+            .dateBtn {
+              display: inline-block;
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              border-radius: 5px;
+              border: solid 1px #e5e5e5;
+              cursor: hand;
+              cursor: pointer;
+              .selected {
+                border: solid #F2D600;
+                box-sizing: border-box;
+                line-height: 32px;
+                border-radius: 20px;
+              }
+            }
+
+            .dateCurrent {
+              background: #ededed;
+              box-shadow: inset 1px 1px 5px 0px rgba(0,0,0,0.5);
+            }
+
+            .dateNormal {
+              background-color: #FFF;
+            }
+            .dateSun {
+              color: #ff0000;
+            }
+            .dateSat {
+              color: #0000ff;
+            }
+
+            .otherMonth {
+              color: #e4e4e4
+            }
+          }
+        }
+      }
+    }
+
+    .monthTablePanel {
+      height: 265px;
+      width: 280px;
+
+      .monthBtn {
+        border: solid 1px #e5e5e5;
+        width: 140px;
+        display: inline-block;
+        box-sizing: border-box;
+        //font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+        line-height: 42px;
+      }
+    }
+
+    .yearTablePanel {
+      height: 265px;
+      width: 280px;
+      position: relative;
+      text-align: center;
+      margin-top: 20px;
+
+      .yearBtn {
+        height: 35px;
+        width: 72px;
+        border-radius: 5px;
+        border: solid 1px #e5e5e5;
+        display: inline-block;
+        line-height: 35px;
+      }
+
+      .prevYear {
+        position: absolute;
+        top: 112px;
+        left: 0px;
+      }
+
+      .nextYear {
+        position: absolute;
+        top: 112px;
+        right: 0px;
+      }
+    }
+
+    .showPanel {
+      display: block;
+    }
+
+    .hidePanel {
+      display: none;
+    }
+  }
+}
+
+.table-form-default-dynamic {
+  width: 100%;
+  margin: 0px auto;
+
+  .header {
+    width: 100%;
+    background: #8bc43f;
+    color: #ffffff;
+    //font-size: 22px;
+    padding-left: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .scroll {
+    width: 100%;
+    max-height: calc(100vh - 100px);
+
+    table {
+      border: #ddd 1px solid;
+      width: 100%;
+
+      th {
+        //font-size: 19px;
+        letter-spacing: 1px;
+        background: #D9D9D9;
+        padding: 5px 13px;
+        color: #8c7f79;
+        border-bottom: #ddd 1px solid;
+        white-space: nowrap;
+        line-height: 19px;
+
+        &.actionClick {
+          cursor: pointer;
+        }
+      }
+
+      td {
+        padding: 0px 5px;
+        border-bottom: #ddd 1px solid;
+        color: #8c7f79;
+        white-space: nowrap;
+        vertical-align: top;
+
+        .dp2AddNewBtnTbl {
+          background: #8bc43f;
+          border-radius: 5px;
+          margin: 5px 0px;
+          display: inline-block;
+          padding: 5px 10px;
+          cursor: pointer;
+          cursor: hand;
+
+          span {
+            color: #FFF;
+            display: inline-block;
+            position: relative;
+            top: 4px;
+          }
+
+          div {
+            color: #FFF;
+            display: inline-block;
+          }
+        }
+      }
+
+      tr.gray {
+        background: #FFF;
+      }
+
+      tr.yellow {
+        background: #F2F2F2;
+      }
+
+      tr:nth-child(even) {
+        background: #FFF;
+      }
+
+      tr:nth-child(odd) {
+        background: #F2F2F2;
+      }
+    }
+  }
+
+  .btn-action {
+    display: inline-block;
+    color: #ff5451;
+    //font-size: 16px;
+    margin-top: 6px;
+
+    &.edit {
+      color: #ffbf21;
+      margin-right: 10px;
+    }
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .delete {
+    abbr {
+      border-bottom: 0px;
+    }
+  }
+
+  .link-action {
+    cursor: pointer;
+    color: #ff5451;
+    //font-size: 20px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .arrowUp {
+    margin: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8c7f79;
+    border-right: 0px;
+    border-bottom: 0px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+  }
+
+  .arrowDown {
+    margin: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8c7f79;
+    border-left: 0px;
+    border-top: 0px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 2px;
+  }
+
+  .dataAction {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.btn-style-dynamic {
+  //font-size: 21px;
+  color: #FFF;
+  background: #8BC43F;
+  padding: 5px 20px;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #8BC43F;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  border-bottom: 3px #76a939 solid;
+  transition: all 0.5s;
+
+  &:hover, &:focus {
+    text-decoration: none;
+    background: #9ddd47;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px #8BC43F solid;
+    transition: all 0.5s;
+  }
+
+  &.btn-small {
+    //font-size: 18px;
+    padding: 3px 10px;
+  }
+
+  &.btn-color-2 {
+    background: #FFAB4A;
+    border-bottom: 3px #c48537 solid;
+
+    &:hover, &:focus {
+      background: #ffd24c;
+      border-bottom: 3px #FFAB4A solid;
+    }
+  }
+
+  &.btn-disable {
+    background: #7e836f;
+    border-bottom: 3px #7e836f solid;
+
+    &:hover, &:focus {
+      background: #7e836f;
+      border-bottom: 3px #7e836f solid;
+    }
+  }
+
+  &.no-mg {
+    margin: 0;
+  }
+
+  i, span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span {
+    margin-left: 5px;
+    top: 2px;
+    position: relative;
+
+    &.glyphicon {
+      margin-left: 0;
+    }
+  }
+
+  .glyphicon {
+    top: 0;
+  }
+}
+
+.btn-margin-left {
+  margin-left: 5px;
+}
+
+.mainPanelDF {
+  width: calc(100% - 30px);
+  margin: 15px 15px;
+  position: relative;
+
+  .panelAlign {
+    margin: 0 auto;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+    .header {
+      color: #ffffff;
+      //font-size: 22px;
+      padding: 0px 10px;
+      background: #8ac33e;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      position: relative;
+
+      .closeBtn {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        cursor: hand;
+        cursor: pointer;
+      }
+    }
+
+    .contentPanel {
+      border: solid 1px #DDD;
+      border-top: 0px;
+      padding: 15px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+.fix-ng-scrollbar {
+  min-width: calc(100% - 17px) !important;
+  width: calc(100% - 17px) !important;
+}

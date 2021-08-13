@@ -1,0 +1,14 @@
+<div class="mainPanelDF">
+    <div class="panelAlign">
+        <div class="header">
+            <div>{{header[rowIndex]}}</div>
+            <div class="closeBtn {{showDeleteRow ? 'show':'hide'}}" id="delete_row_frame_{{rowIndex}}" (click)="deleteRowProcess()">
+                <span class="glyphicon glyphicon-remove-circle"></span>
+            </div>
+        </div>
+        <div class="contentPanel">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
+

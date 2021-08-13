@@ -1,0 +1,110 @@
+<div class="p2DynamicTabPanel">
+    <lb9-dynamic-tab #tabListRefId [tabCreation]="tabCreation" (callBack)="processCallBack($event)"></lb9-dynamic-tab>
+    <div class="tabContentPanel {{tabListRef.getCssStatus('Content Panel')}}">
+        <div *ngIf="contentActive">
+            <lb9-content-panel [panelData]="testData">
+            </lb9-content-panel>
+        </div>
+        <div class="btn-style-dynamic" (click)="toggleContent()">toggle</div>
+    </div>
+    <div class="tabContentPanel {{tabListRef.getCssStatus('Auto Form')}}">
+        <div *ngIf="activeAutoForm">
+<!--            Auto Form Disable For Other Dev-->
+            <app-test-auto-form>
+
+            </app-test-auto-form>
+        </div>
+    </div>
+    <div class="tabContentPanel {{tabListRef.getCssStatus('Popup')}}">
+        <div class="btn-style-dynamic" (click)="popupError()">test popup error</div>
+        <div class="btn-style-dynamic" (click)="popupInfo()">test popup info</div>
+        <div class="btn-style-dynamic" (click)="popupSuccess()">test popup success</div>
+        <div class="btn-style-dynamic" (click)="popupWarning()">test popup warning</div>
+        <div class="btn-style-dynamic" (click)="popupConfirm()">test popup confirm</div>
+
+    </div>
+    <div class="tabContentPanel {{tabListRef.getCssStatus('Component')}}">
+        <div class="btn-style-dynamic" (click)="contentPop.showPopup()">test content popup</div>
+        <div class="btn-style-dynamic" (click)="contentPopCloseBtn.showPopup()">test content popup 2</div>
+        <lb9-content-popup #contentPop [header]="'Test Header'" [footer]="'Test Footer'" (callBack)="processCallBack($event)">
+            <app-example-content></app-example-content>
+        </lb9-content-popup>
+        <lb9-content-popup #contentPopCloseBtn [header]="'Test Header 2'" [footer]="'Test Footer 2'" [closeByButtonOnly]="true" (callBack)="processCallBack($event)">
+            <app-example-content></app-example-content>
+        </lb9-content-popup>
+        <lb9-collapse [header]="'test Header'">
+            <app-example-content></app-example-content>
+        </lb9-collapse>
+        <lb9-step-tab #stepA [tabList]="stepTab" (callBack)="processCallBack($event)"></lb9-step-tab>
+        <div class="{{stepA.getActive(0)}}">Step 1</div>
+        <div class="{{stepA.getActive(1)}}">Step 2</div>
+        <div class="{{stepA.getActive(2)}}">Step 3</div>
+        <div class="{{stepA.getActive(3)}}">Step 4</div>
+        <div class="{{stepA.getActive(4)}}">Step 5</div>
+        <div class="btn-style-dynamic" (click)="stepA.prevStep()">test Prev Step</div>
+        <div class="btn-style-dynamic" (click)="stepA.nextStep()">test Next Step</div>
+        <div class="btn-style-dynamic" (click)="stepA.gotoStep(0)">test jump Step 1</div>
+    </div>
+    <div class="tabContentPanel {{tabListRef.getCssStatus('Form')}}">
+        <lb9-dynamic-form #dynamicForm [formCreation]="formCreation" [model]="model" (callBack)="processCallBack($event)"></lb9-dynamic-form>
+        <div (click)="checkData()" class="btn-style-dynamic">check</div>
+        <div class="btn-style-dynamic" (click)="testSetAttribute()">test set attribute</div>
+        <div class="btn-style-dynamic" (click)="testGetAttribute()">test get attribute</div>
+        <div class="btn-style-dynamic" (click)="testSetValue()">test set value</div>
+        <div class="btn-style-dynamic" (click)="testGetValue()">test get value</div>
+        <div class="btn-style-dynamic" (click)="testGetInput()">test get dynamic input element</div>
+        <div class="btn-style-dynamic" (click)="testReRenderField()">test Rerender Field</div>
+        <div class="btn-style-dynamic" (click)="testMapSetAttribute()">test map set attribute</div>
+        <div class="btn-style-dynamic" (click)="testMapSetValue()">test map set value</div>
+        <div class="btn-style-dynamic" (click)="testMapGetValue()">test map get value</div>
+        <div class="btn-style-dynamic" (click)="testGetRequire()">test get require</div>
+        <div class="btn-style-dynamic" (click)="testGetValidate()">test get validate</div>
+        <div class="btn-style-dynamic" (click)="testViewMode()">test view mode</div>
+        <div class="btn-style-dynamic" (click)="testEditMode()">test edit mode</div>
+        <div class="btn-style-dynamic" (click)="testReRenderForm()">test Rerender Form</div>
+        <div class="btn-style-dynamic" (click)="testMapSetAutoComplete()">set Auto Complete</div>
+        <div class="btn-style-dynamic" (click)="testSetDefault()">set Default</div>
+    </div>
+    <div class="tabContentPanel {{tabListRef.getCssStatus('Form Table')}}">
+        <lb9-dynamic-form #dynamicFormTable [formCreation]="formCreationTable" (callBack)="processCallBack($event)"></lb9-dynamic-form>
+        <div (click)="checkDataTable()" class="btn-style-dynamic">check</div>
+        <div class="btn-style-dynamic" (click)="testEnableFormRow()">test Enable Row 0</div>
+        <div class="btn-style-dynamic" (click)="testDisableFormRow()">test Disable Row 0</div>
+        <div class="btn-style-dynamic" (click)="testEnableField()">test Enable Field</div>
+        <div class="btn-style-dynamic" (click)="testDisableField()">test Disable Field</div>
+        <div class="btn-style-dynamic" (click)="testFormTableGetInput()">test Get Input</div>
+        <div class="btn-style-dynamic" (click)="testDeleteMulti()">test Delete Multi Row</div>
+        <div class="btn-style-dynamic" (click)="testAddRow()">test Add Row</div>
+        <div class="btn-style-dynamic" (click)="toggleLockTab()">Toggle Lock Tab</div>
+        <div class="btn-style-dynamic" (click)="testNextTab()">next Tab</div>
+        <div class="btn-style-dynamic" (click)="testDisableTab()">Disable Tab 5</div>
+        <div class="btn-style-dynamic" (click)="testEnableTab()">Enable Tab 5</div>
+        <div class="btn-style-dynamic" (click)="testDuplicateToNewRow()">Test Duplicate To New Row</div>
+        <div class="btn-style-dynamic" (click)="testCheckDuplicate()">test check duplicate</div>
+        <div class="btn-style-dynamic" (click)="testReRenderTableForm()">test Rerender Form</div>
+        <div class="btn-style-dynamic" (click)="testSetRow(10)">test set row 10</div>
+        <div class="btn-style-dynamic" (click)="testSetRow(2)">test set row 2</div>
+<!--        <div class="btn-style-dynamic" (click)="testDelete()">test Delete NG9</div>-->
+    </div>
+    <div class="tabContentPanel {{tabListRef.getCssStatus('Table')}}">
+        <lb9-dynamic-table [tableCreation]="tableCreation" #tableId (callBack)="processCallBack($event)"></lb9-dynamic-table>
+        <div class="btn-style-dynamic" (click)="getTableCheckList()">test get checkedList</div>
+        <div class="btn-style-dynamic" (click)="clearTableCheckList()">test clear checkedList</div>
+    </div>
+    <div class="tabContentPanel {{tabListRef.getCssStatus('Error')}}">
+        <div class="btn-style-dynamic" (click)="addError()">add error</div>
+        <div class="btn-style-dynamic" (click)="clearError()">clear error</div>
+        <div class="btn-style-dynamic" (click)="testNextTab()">next Tab</div>
+    </div>
+    <div class="tabContentPanel {{tabListRef.getCssStatus('Lock Screen')}}">
+        <div class="btn-style-dynamic" (click)="testLockScreen()">test Lock Screen</div>
+        <div class="btn-style-dynamic" (click)="testSetLickScreenColor()">test Lock Screen Color</div>
+        <div class="btn-style-dynamic" (click)="testLockScreen()">test Lock Screen</div>
+        <div class="btn-style-dynamic" (click)="testNextTab()">next Tab</div>
+    </div>
+</div>
+<lb9-error-msg-bubble #errorBubble></lb9-error-msg-bubble>
+<lb9-dynamic-popup #p2popup (callback)="popupCallback($event)"></lb9-dynamic-popup>
+<lb9-paging *ngIf="tableCreation.showPaging" [currentPage]="1"
+            [totalPage]="5"
+            [totalRecord]="255"></lb9-paging>

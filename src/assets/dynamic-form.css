@@ -1,0 +1,919 @@
+.defaultDynamicForm {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  letter-spacing: 1px; }
+  .defaultDynamicForm .fieldContainer {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top; }
+    @media screen and (max-width: 767px) {
+      .defaultDynamicForm .fieldContainer {
+        width: 100%;
+        text-align: center; } }
+  .defaultDynamicForm .dp2FieldPanel {
+    margin: 7px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left; }
+    .defaultDynamicForm .dp2FieldPanel .dp2Label {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 32px;
+      padding-right: 3px;
+      line-height: 30px; }
+      .defaultDynamicForm .dp2FieldPanel .dp2Label .requireLabel {
+        color: #F00;
+        margin-left: 2px; }
+    .defaultDynamicForm .dp2FieldPanel .customClass {
+      width: 100%; }
+    .defaultDynamicForm .dp2FieldPanel .singleLine {
+      display: inline-block; }
+      @media screen and (max-width: 767px) {
+        .defaultDynamicForm .dp2FieldPanel .singleLine {
+          display: block; } }
+    .defaultDynamicForm .dp2FieldPanel .vAlignTop {
+      vertical-align: top; }
+    .defaultDynamicForm .dp2FieldPanel .alignRight {
+      text-align: right; }
+      @media screen and (max-width: 767px) {
+        .defaultDynamicForm .dp2FieldPanel .alignRight {
+          text-align: left; } }
+    .defaultDynamicForm .dp2FieldPanel .dp2MiddleTool {
+      text-align: center; }
+      .defaultDynamicForm .dp2FieldPanel .dp2MiddleTool .btn-margin-bottom {
+        margin-bottom: 10px; }
+    .defaultDynamicForm .dp2FieldPanel .dp2InputBox {
+      width: 100%;
+      min-height: 30px; }
+      @media screen and (max-width: 767px) {
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox {
+          width: 100% !important; } }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox input {
+        line-height: 33px; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox input, .defaultDynamicForm .dp2FieldPanel .dp2InputBox textarea {
+        border: 1px solid #a9a9a9;
+        border-radius: 5px;
+        padding: 0px 5px;
+        max-width: 100%; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox input:-moz-read-only, .defaultDynamicForm .dp2FieldPanel .dp2InputBox textarea:-moz-read-only {
+        background-color: #F2F2F2; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox input:read-only, .defaultDynamicForm .dp2FieldPanel .dp2InputBox textarea:read-only {
+        background-color: #F2F2F2; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox select {
+        background-color: #FFF;
+        line-height: 33px; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox select:disabled {
+        background-color: #F2F2F2; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox label {
+        font-weight: normal; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox textarea {
+        width: 100%; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .fullWidth {
+        width: 100%; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .dateWidth {
+        width: calc(100% - 36px); }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .dateToggle {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: #8BC43F;
+        display: inline-block;
+        padding: 1px 5px 4px 7px;
+        border-radius: 5px; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .dateToggle span {
+          margin-top: 1px;
+          top: 5px;
+          color: #FFF; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .dateToggleDisable {
+        background-color: #7E836F; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .require {
+        border-color: #f00;
+        box-shadow: 2px 2px 2px rgba(255, 0, 0, 0.2), -2px -2px 2px rgba(255, 0, 0, 0.2), 2px -2px 2px rgba(255, 0, 0, 0.2), -2px 2px 2px rgba(255, 0, 0, 0.2); }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .labelDetail {
+        line-height: 30px; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .sourceBox {
+        padding: 10px;
+        width: 50%;
+        border: 1px solid #a9a9a9;
+        border-radius: 5px; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .sourceBox .source, .defaultDynamicForm .dp2FieldPanel .dp2InputBox .sourceBox .destination {
+          max-height: 20vh;
+          overflow-y: auto;
+          overflow-x: hidden;
+          transition: all 0.5s; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .sourceBox .source_select {
+          cursor: pointer; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .sourceBox .source_select:hover {
+          background: #c9c9c9; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .readonly {
+        background-color: #F2F2F2; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .iconBox {
+        padding: 10px;
+        vertical-align: middle;
+        width: 39px;
+        text-align: center;
+        color: #a9a9a9a9; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .icon {
+        color: #000;
+        display: inline-block;
+        cursor: hand;
+        cursor: pointer;
+        margin: 1px;
+        line-height: 40px; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .icon-disable {
+        color: #7e836f; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative {
+        position: relative;
+        margin-top: 5px; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .checkBoxTableDisplay {
+          min-height: 30px;
+          max-height: 100px;
+          overflow: hidden; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .checkBoxIndent {
+          margin-left: 10px;
+          line-height: 20px;
+          font-size: 18px; }
+          .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .checkBoxIndent input {
+            vertical-align: middle;
+            margin: 0px; }
+          .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .checkBoxIndent label {
+            margin: 0px 0px 0px 4px; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .singlePerLine {
+          display: block; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .multiplePerLine {
+          display: inline-block; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .deleteBtn {
+          position: absolute;
+          top: 7px;
+          right: 6px;
+          opacity: 0.2; }
+          .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .deleteBtn span {
+            color: #F2D600;
+            cursor: pointer; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .deleteBtnWithDate {
+          position: absolute;
+          top: 7px;
+          right: 40px;
+          opacity: 0.2; }
+          .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .deleteBtnWithDate span {
+            color: #F2D600;
+            cursor: pointer; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .autoCompleteHide {
+          display: none; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .autoCompleteShow {
+          display: block; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .autoCompleteList {
+          position: absolute;
+          z-index: 3;
+          background: #FFF;
+          width: 100%;
+          border: 1px solid #246627;
+          border-radius: 5px;
+          overflow: hidden;
+          top: 34px; }
+          .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .autoCompleteList .autoCompleteListBox {
+            padding: 10px;
+            max-height: 60vh; }
+          .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .autoCompleteList .autoCompleteData {
+            padding: 3px 6px; }
+          .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .autoCompleteList .selectedIndex {
+            background: #c9c9c9; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .checkboxHide {
+          display: none; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .checkboxShow {
+          display: block; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .checkboxList {
+          position: absolute;
+          z-index: 3;
+          background: #FFF;
+          width: 100%;
+          border: 1px solid #246627;
+          border-radius: 5px;
+          overflow: hidden;
+          top: 34px; }
+          .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .checkboxList .checkboxListBox {
+            padding: 10px;
+            max-height: 60vh; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative .select-style-custom {
+          max-width: 100%; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .arrowToggle {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        cursor: hand;
+        cursor: pointer; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .arrowToggle .arrowUp {
+          margin: 5px;
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border: 5px solid #8c7f79;
+          border-left: 5px solid transparent;
+          border-top: 5px solid transparent;
+          transform: rotate(45deg);
+          position: relative;
+          top: 2px; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .arrowToggle .arrowDown {
+          margin: 5px;
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border: 5px solid #8c7f79;
+          border-left: 5px solid transparent;
+          border-top: 5px solid transparent;
+          transform: rotate(45deg);
+          position: relative;
+          top: 2px; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative:first-child {
+        margin-top: 0px; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .posRelative:hover .deleteBtn {
+        opacity: 1; }
+      .defaultDynamicForm .dp2FieldPanel .dp2InputBox .addBtn {
+        margin: 5px 0px 0px 5px; }
+        .defaultDynamicForm .dp2FieldPanel .dp2InputBox .addBtn span {
+          color: #71c825;
+          cursor: pointer; }
+    .defaultDynamicForm .dp2FieldPanel .dp2TCheckBox label {
+      font-weight: initial; }
+    .defaultDynamicForm .dp2FieldPanel .image {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat; }
+    .defaultDynamicForm .dp2FieldPanel .upload input {
+      font-size: 14px; }
+    .defaultDynamicForm .dp2FieldPanel .select-style-custom {
+      background: url("../images/arrow_drop_down.png") no-repeat 100%/30px auto;
+      appearance: none;
+      -webkit-appearance: none;
+      padding: 0px 35px 0px 5px;
+      border-radius: 5px;
+      border: 1px solid #a9a9a9; }
+    .defaultDynamicForm .dp2FieldPanel .dp2Note {
+      color: #999; }
+    .defaultDynamicForm .dp2FieldPanel .dp2Error {
+      color: #f91212; }
+  .defaultDynamicForm .dp2Col1 {
+    width: calc(100% - 14px); }
+    @media screen and (max-width: 767px) {
+      .defaultDynamicForm .dp2Col1 {
+        width: calc(100% - 10px);
+        max-width: 425px; } }
+  .defaultDynamicForm .dp2Col2 {
+    width: calc(50% - 18px); }
+    @media screen and (max-width: 767px) {
+      .defaultDynamicForm .dp2Col2 {
+        width: calc(100% - 18px);
+        max-width: 425px; } }
+  .defaultDynamicForm .dp2Col3 {
+    width: calc(33% - 18px); }
+    @media screen and (max-width: 767px) {
+      .defaultDynamicForm .dp2Col3 {
+        width: calc(100% - 18px);
+        max-width: 425px; } }
+  .defaultDynamicForm .dp2Col4 {
+    width: calc(25% - 18px); }
+    @media screen and (max-width: 767px) {
+      .defaultDynamicForm .dp2Col4 {
+        width: calc(100% - 18px);
+        max-width: 425px; } }
+  .defaultDynamicForm .dp2hide {
+    display: none; }
+  .defaultDynamicForm .dp2Table {
+    display: table; }
+    .defaultDynamicForm .dp2Table .dp2Row {
+      display: table-row; }
+      .defaultDynamicForm .dp2Table .dp2Row .dp2Cell {
+        display: table-cell; }
+  .defaultDynamicForm .dp2TableSpace {
+    border-spacing: 5px;
+    border-collapse: separate;
+    border: 1px solid #a9a9a9;
+    border-radius: 5px;
+    background: #fffdef; }
+  .defaultDynamicForm .dp2AddNew {
+    text-align: center; }
+    .defaultDynamicForm .dp2AddNew .dp2AddNewBtn {
+      display: inline-block;
+      font-size: 20px;
+      margin: 5px;
+      padding: 5px 30px;
+      background: #71c825;
+      color: #FFF;
+      border-radius: 30px;
+      cursor: hand;
+      cursor: pointer; }
+      .defaultDynamicForm .dp2AddNew .dp2AddNewBtn span {
+        padding-top: 5px; }
+      .defaultDynamicForm .dp2AddNew .dp2AddNewBtn div {
+        display: inline-block;
+        margin-left: 10px;
+        margin-top: 2px;
+        vertical-align: top; }
+  .defaultDynamicForm input[type=number]::-webkit-inner-spin-button,
+  .defaultDynamicForm input[type=number]::-webkit-outer-spin-button {
+    opacity: 1; }
+
+.panel-heading-dynamic label {
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  font-weight: 600; }
+
+#dynamicTable, .table-default-dynamic {
+  width: 100%;
+  margin: 0px auto; }
+  #dynamicTable .header, .table-default-dynamic .header {
+    width: 100%;
+    background: #8bc43f;
+    color: #ffffff;
+    font-size: 22px;
+    padding-left: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+  #dynamicTable .scroll, .table-default-dynamic .scroll {
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    overflow: auto; }
+    #dynamicTable .scroll table, .table-default-dynamic .scroll table {
+      border: #ddd 1px solid;
+      width: 100%; }
+      #dynamicTable .scroll table th, .table-default-dynamic .scroll table th {
+        font-size: 19px;
+        letter-spacing: 1px;
+        background: #D9D9D9;
+        padding: 0px 5px;
+        color: #8c7f79;
+        border-bottom: #ddd 1px solid;
+        white-space: nowrap; }
+        #dynamicTable .scroll table th.actionClick, .table-default-dynamic .scroll table th.actionClick {
+          cursor: pointer; }
+      #dynamicTable .scroll table td, .table-default-dynamic .scroll table td {
+        padding: 0px 5px;
+        border-bottom: #ddd 1px solid;
+        color: #8c7f79;
+        white-space: nowrap;
+        vertical-align: top; }
+      #dynamicTable .scroll table tr.gray, .table-default-dynamic .scroll table tr.gray {
+        background: #FFF; }
+      #dynamicTable .scroll table tr.yellow, .table-default-dynamic .scroll table tr.yellow {
+        background: #F2F2F2; }
+      #dynamicTable .scroll table tr:nth-child(even), .table-default-dynamic .scroll table tr:nth-child(even) {
+        background: #FFF; }
+      #dynamicTable .scroll table tr:nth-child(odd), .table-default-dynamic .scroll table tr:nth-child(odd) {
+        background: #F2F2F2; }
+  #dynamicTable .btn-action, .table-default-dynamic .btn-action {
+    display: inline-block;
+    color: #ff5451;
+    font-size: 16px;
+    margin-top: 6px; }
+    #dynamicTable .btn-action.edit, .table-default-dynamic .btn-action.edit {
+      color: #ffbf21;
+      margin-right: 10px; }
+    #dynamicTable .btn-action span, .table-default-dynamic .btn-action span {
+      cursor: pointer; }
+  #dynamicTable .link-action, .table-default-dynamic .link-action {
+    cursor: pointer;
+    color: #ff5451;
+    font-size: 20px; }
+    #dynamicTable .link-action:hover, .table-default-dynamic .link-action:hover {
+      text-decoration: underline; }
+  #dynamicTable .arrowUp, .table-default-dynamic .arrowUp {
+    margin: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8c7f79;
+    border-right: 0px;
+    border-bottom: 0px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px; }
+  #dynamicTable .arrowDown, .table-default-dynamic .arrowDown {
+    margin: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8c7f79;
+    border-left: 0px;
+    border-top: 0px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 2px; }
+  #dynamicTable .dataAction, .table-default-dynamic .dataAction {
+    cursor: pointer; }
+    #dynamicTable .dataAction:hover, .table-default-dynamic .dataAction:hover {
+      text-decoration: underline; }
+
+#pagingPanel {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  height: 31px;
+  margin-top: 15px; }
+  #pagingPanel .totalRecord {
+    position: absolute;
+    left: 0px; }
+  #pagingPanel .pageControl {
+    position: absolute;
+    right: 0px; }
+  #pagingPanel div {
+    display: inline-block;
+    font-size: 22px; }
+  #pagingPanel input {
+    width: auto; }
+  #pagingPanel .currentPage {
+    display: inline-block;
+    font-size: 22px;
+    text-align: center;
+    height: 27px;
+    padding: 0 10px; }
+  #pagingPanel input[type=number]::-webkit-inner-spin-button,
+  #pagingPanel input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; }
+  #pagingPanel .first {
+    padding: 0px 2px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #8AC33E;
+    position: relative;
+    top: 3px; }
+  #pagingPanel .last {
+    padding: 0px 2px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #8AC33E;
+    position: relative;
+    top: 3px; }
+  #pagingPanel .arrowLeft {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8AC33E;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-radius: 3px;
+    transform: rotate(-45deg); }
+  #pagingPanel .innerLeftArrow {
+    position: relative;
+    left: -6px; }
+  #pagingPanel .first:hover .arrowLeft {
+    border-color: #b4ff52; }
+  #pagingPanel .previous {
+    padding: 0px 2px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #8AC33E;
+    position: relative;
+    top: 3px; }
+  #pagingPanel .previous:hover .arrowLeft {
+    border-color: #b4ff52; }
+  #pagingPanel .arrowRight {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8AC33E;
+    border-top: 0px;
+    border-left: 0px;
+    border-radius: 3px;
+    transform: rotate(-45deg); }
+  #pagingPanel .innerRightArrow {
+    position: relative;
+    right: -7px; }
+  #pagingPanel .last:hover .arrowRight {
+    border-color: #b4ff52; }
+  #pagingPanel .next {
+    padding: 0px 2px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #8AC33E;
+    position: relative;
+    top: 3px; }
+  #pagingPanel .next:hover .arrowRight {
+    border-color: #b4ff52; }
+
+.p2DynamicTabPanel .dynamicTab {
+  height: 32px;
+  position: relative;
+  overflow: hidden; }
+  .p2DynamicTabPanel .dynamicTab .tabComponent {
+    position: relative;
+    display: inline-block;
+    background: #DDD;
+    color: #666;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 0px 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    height: 35px;
+    line-height: 29px;
+    border-top: solid 3px;
+    cursor: pointer;
+    vertical-align: top;
+    margin-left: 2px; }
+  .p2DynamicTabPanel .dynamicTab .tabComponent:first-child {
+    margin-left: 0px; }
+  .p2DynamicTabPanel .dynamicTab .active {
+    background: #8ac33e;
+    color: #FFF;
+    border-top-color: #76a939; }
+  .p2DynamicTabPanel .dynamicTab .inactive {
+    border-top-color: #b5b5b5; }
+.p2DynamicTabPanel .p2DShowTab {
+  display: block; }
+.p2DynamicTabPanel .p2DHideTab {
+  display: none; }
+.p2DynamicTabPanel .tabContentPanel {
+  border: 1px solid #DDD;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 10px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1); }
+  .p2DynamicTabPanel .tabContentPanel .fixMaxHeight {
+    position: relative;
+    max-height: 40vh;
+    overflow: hidden; }
+    .p2DynamicTabPanel .tabContentPanel .fixMaxHeight .mCSB_scrollTools_vertical {
+      right: -9px; }
+
+#dynamicPopup .modal-header .modal-title {
+  font-size: 32px; }
+#dynamicPopup .modal-body .glyphicon {
+  font-size: 40px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); }
+#dynamicPopup .modal-body .data-msg {
+  font-size: 22px;
+  color: #999; }
+#dynamicPopup .cError {
+  color: #f91212; }
+#dynamicPopup .cInfo {
+  color: #5351df; }
+#dynamicPopup .cWarning {
+  color: #ffe807; }
+#dynamicPopup .cSuccess {
+  color: #21a807; }
+#dynamicPopup .cConfirm {
+  color: #ff7b00; }
+
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.dynamic-popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all linear 300ms; }
+  .dynamic-popup.showPopup {
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 1; }
+    .dynamic-popup.showPopup .dynamic-popup-inside {
+      margin-top: 50px; }
+  .dynamic-popup .foreground-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; }
+  .dynamic-popup .dynamic-popup-inside {
+    width: 600px;
+    margin: 0px auto;
+    transition: all linear 300ms; }
+  .dynamic-popup .dynamic-popup-container {
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10; }
+  .dynamic-popup .dynamic-popup-header, .dynamic-popup .dynamic-popup-body, .dynamic-popup .dynamic-popup-footer {
+    padding: 1rem; }
+  .dynamic-popup .dynamic-popup-header {
+    border-bottom: 1px solid #e9ecef;
+    font-size: 22px;
+    color: #3a3a3a;
+    font-weight: 600; }
+  .dynamic-popup .dynamic-popup-body {
+    max-height: 50vh;
+    overflow: auto; }
+    .dynamic-popup .dynamic-popup-body .glyphicon {
+      font-size: 40px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); }
+    .dynamic-popup .dynamic-popup-body .data-msg {
+      font-size: 22px;
+      color: #999; }
+  .dynamic-popup .dynamic-popup-footer {
+    border-top: 1px solid #e9ecef; }
+  .dynamic-popup .cError {
+    color: #f91212; }
+  .dynamic-popup .cInfo {
+    color: #5351df; }
+  .dynamic-popup .cWarning {
+    color: #ffe807; }
+  .dynamic-popup .cSuccess {
+    color: #21a807; }
+  .dynamic-popup .cConfirm {
+    color: #ff7b00; }
+
+.datePickerPanel {
+  position: absolute;
+  z-index: 1;
+  margin-top: 10px;
+  margin-bottom: 20px; }
+  .datePickerPanel .datePickerAlign {
+    background: #FFF;
+    position: relative;
+    min-width: 320px;
+    max-width: 320px;
+    padding: 20px;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 100%; }
+    .datePickerPanel .datePickerAlign .monthYearPanel {
+      position: relative; }
+      .datePickerPanel .datePickerAlign .monthYearPanel .monthYearDisplay {
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+        line-height: 30px; }
+        .datePickerPanel .datePickerAlign .monthYearPanel .monthYearDisplay .monthYearAction {
+          cursor: pointer;
+          cursor: hand;
+          display: inline-block; }
+          .datePickerPanel .datePickerAlign .monthYearPanel .monthYearDisplay .monthYearAction span {
+            font-size: 14px;
+            top: 3px;
+            position: relative; }
+        .datePickerPanel .datePickerAlign .monthYearPanel .monthYearDisplay .prev {
+          position: absolute;
+          display: inline-block;
+          left: 5px;
+          top: 5px;
+          cursor: pointer;
+          cursor: hand; }
+        .datePickerPanel .datePickerAlign .monthYearPanel .monthYearDisplay .next {
+          position: absolute;
+          display: inline-block;
+          right: 5px;
+          top: 5px;
+          float: right;
+          cursor: pointer;
+          cursor: hand; }
+    .datePickerPanel .datePickerAlign .dateTablePanel {
+      height: 265px;
+      width: 280px; }
+      .datePickerPanel .datePickerAlign .dateTablePanel .dateTable tr th {
+        text-align: center;
+        padding: 0px; }
+      .datePickerPanel .datePickerAlign .dateTablePanel .dateTable tr td {
+        padding: 0px;
+        text-align: center; }
+        .datePickerPanel .datePickerAlign .dateTablePanel .dateTable tr td .dateBtn {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 5px;
+          border: solid 1px #e5e5e5;
+          background-color: #FFF;
+          cursor: hand;
+          cursor: pointer; }
+        .datePickerPanel .datePickerAlign .dateTablePanel .dateTable tr td .otherMonth {
+          color: #e4e4e4; }
+    .datePickerPanel .datePickerAlign .monthTablePanel {
+      height: 265px;
+      width: 280px; }
+      .datePickerPanel .datePickerAlign .monthTablePanel .monthBtn {
+        border: solid 1px #e5e5e5;
+        width: 140px;
+        display: inline-block;
+        box-sizing: border-box;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+        line-height: 42px; }
+    .datePickerPanel .datePickerAlign .yearTablePanel {
+      height: 265px;
+      width: 280px;
+      position: relative;
+      text-align: center;
+      margin-top: 20px; }
+      .datePickerPanel .datePickerAlign .yearTablePanel .yearBtn {
+        height: 35px;
+        width: 72px;
+        border-radius: 5px;
+        border: solid 1px #e5e5e5;
+        display: inline-block;
+        line-height: 35px; }
+      .datePickerPanel .datePickerAlign .yearTablePanel .prevYear {
+        position: absolute;
+        top: 112px;
+        left: 0px; }
+      .datePickerPanel .datePickerAlign .yearTablePanel .nextYear {
+        position: absolute;
+        top: 112px;
+        right: 0px; }
+    .datePickerPanel .datePickerAlign .showPanel {
+      display: block; }
+    .datePickerPanel .datePickerAlign .hidePanel {
+      display: none; }
+
+.table-form-default-dynamic {
+  width: 100%;
+  margin: 0px auto; }
+  .table-form-default-dynamic .header {
+    width: 100%;
+    background: #8bc43f;
+    color: #ffffff;
+    font-size: 22px;
+    padding-left: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+  .table-form-default-dynamic .scroll {
+    width: 100%;
+    max-height: calc(100vh - 100px); }
+    .table-form-default-dynamic .scroll table {
+      border: #ddd 1px solid;
+      width: 100%; }
+      .table-form-default-dynamic .scroll table th {
+        font-size: 19px;
+        letter-spacing: 1px;
+        background: #D9D9D9;
+        padding: 5px 13px;
+        color: #8c7f79;
+        border-bottom: #ddd 1px solid;
+        white-space: nowrap;
+        line-height: 19px; }
+        .table-form-default-dynamic .scroll table th.actionClick {
+          cursor: pointer; }
+      .table-form-default-dynamic .scroll table td {
+        padding: 0px 5px;
+        border-bottom: #ddd 1px solid;
+        color: #8c7f79;
+        white-space: nowrap;
+        vertical-align: top; }
+        .table-form-default-dynamic .scroll table td .dp2AddNewBtnTbl {
+          background: #8bc43f;
+          border-radius: 5px;
+          margin: 5px 0px;
+          display: inline-block;
+          padding: 5px 10px;
+          cursor: pointer;
+          cursor: hand; }
+          .table-form-default-dynamic .scroll table td .dp2AddNewBtnTbl span {
+            color: #FFF;
+            display: inline-block;
+            position: relative;
+            top: 4px; }
+          .table-form-default-dynamic .scroll table td .dp2AddNewBtnTbl div {
+            color: #FFF;
+            display: inline-block; }
+      .table-form-default-dynamic .scroll table tr.gray {
+        background: #FFF; }
+      .table-form-default-dynamic .scroll table tr.yellow {
+        background: #F2F2F2; }
+      .table-form-default-dynamic .scroll table tr:nth-child(even) {
+        background: #FFF; }
+      .table-form-default-dynamic .scroll table tr:nth-child(odd) {
+        background: #F2F2F2; }
+  .table-form-default-dynamic .btn-action {
+    display: inline-block;
+    color: #ff5451;
+    font-size: 16px;
+    margin-top: 6px; }
+    .table-form-default-dynamic .btn-action.edit {
+      color: #ffbf21;
+      margin-right: 10px; }
+    .table-form-default-dynamic .btn-action span {
+      cursor: pointer; }
+  .table-form-default-dynamic .delete abbr {
+    border-bottom: 0px; }
+  .table-form-default-dynamic .link-action {
+    cursor: pointer;
+    color: #ff5451;
+    font-size: 20px; }
+    .table-form-default-dynamic .link-action:hover {
+      text-decoration: underline; }
+  .table-form-default-dynamic .arrowUp {
+    margin: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8c7f79;
+    border-right: 0px;
+    border-bottom: 0px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px; }
+  .table-form-default-dynamic .arrowDown {
+    margin: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8c7f79;
+    border-left: 0px;
+    border-top: 0px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 2px; }
+  .table-form-default-dynamic .dataAction {
+    cursor: pointer; }
+    .table-form-default-dynamic .dataAction:hover {
+      text-decoration: underline; }
+
+.btn-style-dynamic {
+  font-size: 21px;
+  color: #FFF;
+  background: #8BC43F;
+  padding: 5px 20px;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #8BC43F;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  border-bottom: 3px #76a939 solid;
+  transition: all 0.5s; }
+  .btn-style-dynamic:hover, .btn-style-dynamic:focus {
+    text-decoration: none;
+    background: #9ddd47;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px #8BC43F solid;
+    transition: all 0.5s; }
+  .btn-style-dynamic.btn-small {
+    font-size: 18px;
+    padding: 3px 10px; }
+  .btn-style-dynamic.btn-color-2 {
+    background: #FFAB4A;
+    border-bottom: 3px #c48537 solid; }
+    .btn-style-dynamic.btn-color-2:hover, .btn-style-dynamic.btn-color-2:focus {
+      background: #ffd24c;
+      border-bottom: 3px #FFAB4A solid; }
+  .btn-style-dynamic.btn-disable {
+    background: #7e836f;
+    border-bottom: 3px #7e836f solid; }
+    .btn-style-dynamic.btn-disable:hover, .btn-style-dynamic.btn-disable:focus {
+      background: #7e836f;
+      border-bottom: 3px #7e836f solid; }
+  .btn-style-dynamic.no-mg {
+    margin: 0; }
+  .btn-style-dynamic i, .btn-style-dynamic span {
+    display: inline-block;
+    vertical-align: middle; }
+  .btn-style-dynamic span {
+    margin-left: 5px;
+    top: 2px;
+    position: relative; }
+    .btn-style-dynamic span.glyphicon {
+      margin-left: 0; }
+  .btn-style-dynamic .glyphicon {
+    top: 0; }
+
+.mainPanelDF {
+  width: calc(100% - 30px);
+  margin: 15px 15px;
+  position: relative; }
+  .mainPanelDF .panelAlign {
+    margin: 0 auto;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); }
+    .mainPanelDF .panelAlign .header {
+      color: #ffffff;
+      font-size: 22px;
+      padding: 0px 10px;
+      background: #8ac33e;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      position: relative; }
+      .mainPanelDF .panelAlign .header .closeBtn {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        cursor: hand;
+        cursor: pointer; }
+    .mainPanelDF .panelAlign .contentPanel {
+      border: solid 1px #DDD;
+      border-top: 0px;
+      padding: 15px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }

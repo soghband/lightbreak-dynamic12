@@ -1,0 +1,28 @@
+<div class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}" [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
+    <lb9-dynamic-form-label-panel
+            [fieldCreation]="fieldCreation"
+            [option]="option"
+            [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+    <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
+        <ng-container *ngFor="let dataIndex of objKey(data[fieldCreation.fieldName])">
+            <div>
+                <ng-container *ngFor="let listIndex of objKey(fieldCreation.valueList)">
+                    <div class="checkBoxIndent {{singleLine}}">
+                        <input type="radio"
+                               id="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}_{{dataIndex}}_{{listIndex}}_{{rowIndex}}"
+                               name="{{fieldCreation.fieldName}}_{{dataIndex}}_{{rowIndex}}"
+                               value="{{fieldCreation.valueList[listIndex].value}}"
+                               [(ngModel)]="data[fieldCreation.fieldName][dataIndex]"
+                               [disabled]="getDisable()"
+                               (change)="processChange($event,'change',fieldCreation.valueList[listIndex])">
+                        <label for="id_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}_{{dataIndex}}_{{listIndex}}_{{rowIndex}}">{{fieldCreation.valueList[listIndex].display}}</label>
+
+                    </div>
+                </ng-container>
+            </div>
+        </ng-container>
+        <div class="dp2Note" id="id_note_{{(option.namePrefix ? option.namePrefix+'_':'')}}{{fieldCreation.fieldName}}">
+            {{fieldCreation.note}}
+        </div>
+    </div>
+</div>

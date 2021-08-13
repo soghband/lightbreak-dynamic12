@@ -1,0 +1,22 @@
+<ng-container *ngIf="tableCreation.data">
+    <lb9-table [tableCreation]="tableCreation"
+                [pageNumber]="currentPage" 
+                [sortData]="sortData" #tableID 
+                (callBack)="processCallBack($event)"></lb9-table>
+                
+    <lb9-paging *ngIf="tableCreation.showPaging" [currentPage]="currentPage"
+                [totalPage]="getTotalPage()"
+                [dataRank]="getPageRank()"
+                [totalRecord]="(tableCreation.data.totalRecord ? tableCreation.data.totalRecord : tableCreation.pagination.totalRowNum)"
+                [customClass]="tableCreation.customClassPaging"
+                [pageControlType]="tableCreation.pageControlType"
+                [rowLimit]="tableCreation.rowLimit"
+                [rowLimitOption]="tableCreation.rowLimitOption"
+                (pagingProcess)="processPagingCallBack($event)"
+                (rowLimitCallback)="processRowLimitCallBack($event)"></lb9-paging>
+</ng-container>
+<ng-container *ngIf="!tableCreation.data">
+    <div class="listDataNotFound" [innerHTML]="tableCreation.dataNotFoundString ? tableCreation.dataNotFoundString:'Data Not Found.'">
+
+    </div>
+</ng-container>

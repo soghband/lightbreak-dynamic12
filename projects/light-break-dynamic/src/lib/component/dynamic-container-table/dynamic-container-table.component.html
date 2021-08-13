@@ -1,0 +1,21 @@
+<ng-container *ngFor="let inputData of objKey(containerCreation.fieldList)">
+    <td *ngIf="containerCreation.fieldList[inputData].type != 'hidden'">
+        <ng-container *ngIf="checkReRender(containerCreation.fieldList[inputData].fieldName)">
+            <lb9-dynamic-input [type]="containerCreation.fieldList[inputData].type"
+                               [data]="data[actionDataIndex]"
+                               [rowIndex]="actionDataIndex"
+                               [inputIndex]="inputData"
+                               [option]="option"
+                               [fieldCreation]="containerCreation.fieldList[inputData]"
+                               (callBack)="processCallBack($event)"
+                               (panelCallBack)="processPanelCallBack($event)"></lb9-dynamic-input>
+        </ng-container>
+    </td>
+</ng-container>
+
+<td *ngIf="option.deleteRow">
+     <span *ngIf="!option.disableDelete || (option.disableDelete && !option.disableDelete[actionDataIndex])"
+           class="btn-action delete" id="delete_{{actionDataIndex}}"
+           (click)="deleteRow(actionDataIndex)"><abbr title="{{option.deleteRowText}}"><span
+             class="glyphicon glyphicon-remove-circle"></span></abbr></span>
+</td>

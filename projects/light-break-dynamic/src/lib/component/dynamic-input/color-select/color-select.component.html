@@ -1,0 +1,22 @@
+<div class="dp2FieldPanel {{columnCalculate}} {{getCustomClass()}} {{animateState || !option.enableAnimation || option.enableAnimation === 'false' ? 'dp2FieldPanelAnimateEnd':'dp2FieldPanelAnimateStart'}}" [style.width]="fieldCreation.width" (click)="processPanelCallBack($event)">
+    <lb9-dynamic-form-label-panel
+            [fieldCreation]="fieldCreation"
+            [option]="option"
+            [width]="getLabelWidth()"></lb9-dynamic-form-label-panel>
+    <div class="dp2InputBox {{option.labelAlign == 'left' ? 'singleLine' : ''}}" [style.width]="getInputWidth()">
+        <ng-container *ngFor="let dataIndex of objKeys(data[fieldCreation.fieldName])">
+            <div class="posRelative {{fieldCreation.require && data[fieldCreation.fieldName][dataIndex] == '' ? 'require' : ''}}">
+                <div *ngFor="let colorList of fieldCreation.valueList" class="colorSelect {{data[fieldCreation.fieldName][dataIndex] === colorList.value ? ' colorSelected': ''}}" [style]="{background:colorList.value}" (click)="assignColor(colorList.value, dataIndex)">
+
+                </div>
+                <div *ngIf="fieldCreation.multiValue && !(getDisable())" class="deleteBtn"
+                     (click)="deleteMultiVal(dataIndex)"><span class="glyphicon glyphicon-minus"></span></div>
+            </div>
+        </ng-container>
+        <div class="dp2Note">
+            {{fieldCreation.note}}
+        </div>
+        <div *ngIf="fieldCreation.multiValue && !(getDisable())" class="addBtn" (click)="addMultiVal()"><span
+                class="glyphicon glyphicon-plus"></span></div>
+    </div>
+</div>
